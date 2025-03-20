@@ -54,6 +54,7 @@
             margin-bottom: 1rem;
             padding-left: 1.5rem;
             position: relative;
+            line-height: 1.5; /* Added consistent line height */
         }
         
         .opportunity-list li::before {
@@ -66,15 +67,46 @@
         
         .opportunity-link {
             display: inline-block;
-            margin-top: 0.5rem;
+            margin-top: 0;
             color: #0B3D91;
             text-decoration: none;
             font-weight: bold;
+            line-height: inherit;
+            vertical-align: baseline;
         }
         
         .opportunity-link:hover {
             text-decoration: underline;
             color: #E77817;
+        }
+
+        /* Added to ensure consistent spacing in paragraphs */
+        p {
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        
+        /* Ensure all links maintain consistent line spacing */
+        a {
+            line-height: inherit;
+            vertical-align: baseline;
+        }
+
+        /* Added to ensure consistent spacing for all text elements */
+        .content, .opportunities-section {
+            line-height: 1.5;
+        }
+
+        /* Fix for any nested paragraphs */
+        .opportunity-list li p {
+            margin: 0.5rem 0;
+            display: inline;
+        }
+        
+        /* Fix for list items with inline links */
+        .opportunity-list li a {
+            display: inline;
+            vertical-align: baseline;
         }
     </style>
 </head>
@@ -125,11 +157,9 @@
                     <li><strong>NASA Internships</strong> - Undergraduate and graduate students can apply for summer, fall, and spring internships working on active research projects.
                     <a href="https://intern.nasa.gov/" class="opportunity-link">Apply through NASA Internships</a></li>
                          
-                    <li><strong>Graduate students</strong> -  NASA supports graduate students through the <a href="https://science.nasa.gov/learners/learner-opportunities#grad" class="opportunity-link">multiple programs and opportunities</a>. In addition, it may be possible to arrange a visit to collaborate with us at MSFC on joint research. Contact one of us for more information.</span></p></li>
-
+                    <li><strong>Graduate students</strong> - NASA supports graduate students through the <a href="https://science.nasa.gov/learners/learner-opportunities#grad" class="opportunity-link">multiple programs and opportunities</a>. In addition, it may be possible to arrange a visit to collaborate with us at MSFC on joint research. Contact one of us for more information.</li>
                     
-                    <li><strong>Undergraduate students</strong> - We offer summer projects for undergraduates interested in planetary science. Our students often present at conferences and may experience launches or mission activities. Apply through the <a href="https://science.nasa.gov/learners/learner-opportunities#undergrad" class="opportunity-link"> NASA undergraduate opportunities</a> and contact us directly about your interest. Advanced undergraduates can also apply for the NASA Academy summer program.</span></p></li>
-
+                    <li><strong>Undergraduate students</strong> - We offer summer projects for undergraduates interested in planetary science. Our students often present at conferences and may experience launches or mission activities. Apply through the <a href="https://science.nasa.gov/learners/learner-opportunities#undergrad" class="opportunity-link"> NASA undergraduate opportunities</a> and contact us directly about your interest. Advanced undergraduates can also apply for the NASA Academy summer program.</li>
 
                     <li><strong>NASA STEM Engagement Programs</strong> - Including the Space Grant program which provides funding for student research projects.
                     <a href="https://www.nasa.gov/learning-resources/for-students/" class="opportunity-link">Learn about NASA STEM programs</a></li>
@@ -152,8 +182,6 @@
                 </ul>
             </div>
             
-
-            
             <div class="opportunity-card">
                 <h3>Collaborative Research</h3>
                 <p>We actively seek partnerships with universities, research institutions, and international space agencies:</p>
@@ -165,8 +193,6 @@
                     <a href="mailto:st13-collaborations@nasa.gov" class="opportunity-link">Inquire about collaborations</a></li>
                 </ul>
             </div>
-            
-
         </div>
     </div>
 
