@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Heidi Fuqua Haviland - MSFC</title>
     <link rel="stylesheet" href="../../styles.css">
+    <!-- Load the last modified date script -->
+    <script src="../../last-modified.js"></script>
     <!-- Load the profile page scripts -->
     <script src="../../profile-scripts.js"></script>
 </head>
@@ -144,7 +146,7 @@
     <div class="footer-container">
         <a href="https://www.nasa.gov/"><img src="../../nasa-large.png" alt="NASA Logo" class="footer-logo"></a>
         <div class="footer-content">
-            <p class="last-modified">Last Modified: <span id="last-modified-date">February 3, 2022</span></p>
+            <p class="last-modified">Last Modified: <span id="last-modified-date">[any date]</span></p>
             <p class="nasa-official">NASA Official: Caleb Fassett</p>
         </div>
         <div class="footer-links">
@@ -163,6 +165,18 @@
         </div>
     </div>
     
-    <!-- Dropdown functionality is now handled by profile-scripts.js -->
+    <!-- Dropdown functionality is handled by profile-scripts.js -->
+    
+    <!-- Script to ensure last-modified.js executes properly -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // If last-modified.js hasn't updated the date placeholder, this will ensure it happens
+            if (document.getElementById('last-modified-date').textContent.includes('[any date]')) {
+                const lastModified = new Date(document.lastModified);
+                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                document.getElementById('last-modified-date').textContent = lastModified.toLocaleDateString('en-US', options);
+            }
+        });
+    </script>
 </body>
 </html>
