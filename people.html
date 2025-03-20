@@ -14,104 +14,127 @@
             color: rgb(229, 151, 16);
             font-weight: bold;
         }
+        
+        /* Add these styles to ensure the footer stays at the bottom */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        .content-wrapper {
+            flex: 1;
+        }
+        
+        .footer-container {
+            margin-top: auto;
+        }
     </style>
 </head>
 <body>
-    <div class="fixed-header">
-        <div class="header">
-            <div class="left-banner">
-                <a href="index.html">
-                    <span class="top-line">MARSHALL SPACE FLIGHT CENTER</span>
-                    <span class="middle-line">ST 13: HELIOPHYSICS AND PLANETARY SCIENCE BRANCH</span>
-                    <span class="bottom-line">HELIOPHYSICS AND PLANETARY SCIENCE AT MSFC</span>
-                </a>
+    <div class="content-wrapper">
+        <div class="fixed-header">
+            <div class="header">
+                <div class="left-banner">
+                    <a href="index.html">
+                        <span class="top-line">MARSHALL SPACE FLIGHT CENTER</span>
+                        <span class="middle-line">ST 13: HELIOPHYSICS AND PLANETARY SCIENCE BRANCH</span>
+                        <span class="bottom-line">HELIOPHYSICS AND PLANETARY SCIENCE AT MSFC</span>
+                    </a>
+                </div>
+                <div class="right-banner">
+                    <a href="index.html#news">News</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
             </div>
-            <div class="right-banner">
-                <a href="index.html#news">News</a>
-                <a href="contact.html">Contact Us</a>
+            <div class="nav-bar">
+                <a href="about.html">About Us</a>
+                <a href="people.html">People</a>
+                <a href="opportunities.html">Opportunities</a>
+                <a href="index.html#research_areas">Research</a>
             </div>
         </div>
-        <div class="nav-bar">
-            <a href="about.html">About Us</a>
-            <a href="people.html">People</a>
-            <a href="opportunities.html">Opportunities</a>
-            <a href="index.html#research_areas">Research</a>
+
+        <div style="margin-top: 60px;"><!-- Adjust this value based on the height of your fixed header -->
         </div>
-    </div>
-
-    <div style="margin-top: 60px;"><!-- Adjust this value based on the height of your fixed header -->
-    </div>
-    
-    <div class="hero-section">
-        <div class="hero-text">People</div>
-    </div>
-
-    <div style="margin-top: -100px;"><!-- Adjust this value based on the height of your fixed header -->
-
-    <div class="container">
-        <!-- <p>Welcome to the People page. Here you can list team members, their roles, and contact information.</p> -->
-        <div class="people-list">
-            <div class="person-card">
-                <a href="people_all/paul_bremner/info.html">
-                    <img src="people_all/paul_bremner/photo.jpg" alt="Paul Bremner">
-                </a>
-                <h3>Paul Bremner</h3>
-                <p class="person-title">Assistant Branch Chief</p>
-            </div>
-            <div class="person-card">
-                <a href="people_all/heidi_haviland/info.html">
-                    <img src="people_all/heidi_haviland/photo.jpg" alt="Heidi Fuqua Haviland">
-                </a>
-                <h3>Heidi Fuqua Haviland</h3>
-                <p class="person-title">Assistant Manager</p>
-            </div>
-            <div class="person-card">
-                <a href="people_all/michael_zanetti/info.html">
-                    <img src="people_all/michael_zanetti/photo.jpg" alt="Michael Zanetti">
-                </a>
-                <h3>Michael Zanetti</h3>
-                <p class="person-title">Assistant Manager</p>
-            </div>
-            <!--
-            <div class="person-card">
-                <a href="paul_bremner.html">
-                    <img src="PaulBremner.jpg" alt="Paul Bremner">
-                </a>
-                <h3>Paul Bremner</h3>
-                <p class="person-title">Assistant Manager</p>
-            </div>
-            <div class="person-card">
-                <a href="paul_bremner.html">
-                    <img src="PaulBremner.jpg" alt="Paul Bremner">
-                </a>
-                <h3>Paul Bremner</h3>
-                <p class="person-title">Assistant Manager</p>
-            </div>
-            <div class="person-card">
-                <a href="paul_bremner.html">
-                    <img src="PaulBremner.jpg" alt="Paul Bremner">
-                </a>
-                <h3>Paul Bremner</h3>
-                <p class="person-title">Assistant Manager</p>
-            </div>
-            <div class="person-card">
-                <a href="paul_bremner.html">
-                    <img src="PaulBremner.jpg" alt="Paul Bremner">
-                </a>
-                <h3>Paul Bremner</h3>
-                <p class="person-title">Assistant Manager</p>
-            </div>
-            <div class="person-card">
-                <a href="paul_bremner.html">
-                    <img src="PaulBremner.jpg" alt="Paul Bremner">
-                </a>
-                <h3>Paul Bremner</h3>
-                <p class="person-title">Assistant Manager</p>
-            </div>
-            -->
+        
+        <div class="hero-section">
+            <div class="hero-text">People</div>
         </div>
-    </div>
 
+        <div style="margin-top: -100px;"><!-- Adjust this value based on the height of your fixed header -->
+
+        <div class="container">
+            <!-- <p>Welcome to the People page. Here you can list team members, their roles, and contact information.</p> -->
+            <div class="people-list">
+                <div class="person-card">
+                    <a href="people_all/paul_bremner/info.html">
+                        <img src="people_all/paul_bremner/photo.jpg" alt="Paul Bremner">
+                    </a>
+                    <h3>Paul Bremner</h3>
+                    <p class="person-title">Assistant Branch Chief</p>
+                </div>
+                <div class="person-card">
+                    <a href="people_all/heidi_haviland/info.html">
+                        <img src="people_all/heidi_haviland/photo.jpg" alt="Heidi Fuqua Haviland">
+                    </a>
+                    <h3>Heidi Fuqua Haviland</h3>
+                    <p class="person-title">Assistant Manager</p>
+                </div>
+                <div class="person-card">
+                    <a href="people_all/michael_zanetti/info.html">
+                        <img src="people_all/michael_zanetti/photo.jpg" alt="Michael Zanetti">
+                    </a>
+                    <h3>Michael Zanetti</h3>
+                    <p class="person-title">Assistant Manager</p>
+                </div>
+                <!--
+                <div class="person-card">
+                    <a href="paul_bremner.html">
+                        <img src="PaulBremner.jpg" alt="Paul Bremner">
+                    </a>
+                    <h3>Paul Bremner</h3>
+                    <p class="person-title">Assistant Manager</p>
+                </div>
+                <div class="person-card">
+                    <a href="paul_bremner.html">
+                        <img src="PaulBremner.jpg" alt="Paul Bremner">
+                    </a>
+                    <h3>Paul Bremner</h3>
+                    <p class="person-title">Assistant Manager</p>
+                </div>
+                <div class="person-card">
+                    <a href="paul_bremner.html">
+                        <img src="PaulBremner.jpg" alt="Paul Bremner">
+                    </a>
+                    <h3>Paul Bremner</h3>
+                    <p class="person-title">Assistant Manager</p>
+                </div>
+                <div class="person-card">
+                    <a href="paul_bremner.html">
+                        <img src="PaulBremner.jpg" alt="Paul Bremner">
+                    </a>
+                    <h3>Paul Bremner</h3>
+                    <p class="person-title">Assistant Manager</p>
+                </div>
+                <div class="person-card">
+                    <a href="paul_bremner.html">
+                        <img src="PaulBremner.jpg" alt="Paul Bremner">
+                    </a>
+                    <h3>Paul Bremner</h3>
+                    <p class="person-title">Assistant Manager</p>
+                </div>
+                -->
+            </div>
+        </div>
+        </div> <!-- Closing tag for the div with margin-top: -100px -->
+    </div> <!-- End of content-wrapper -->
 
     <div class="footer-container">
         <a href="https://www.nasa.gov/"><img src="nasa-large.png" alt="NASA Logo" class="footer-logo"></a>
