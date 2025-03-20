@@ -326,38 +326,6 @@ body {
   margin-top: 0;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  .content-container {
-      flex-direction: column;
-  }
-  
-  .text-content, .image-content {
-      flex: 0 0 100%;
-      max-width: 100%;
-      padding-right: 0;
-  }
-  
-  .image-content {
-      margin-top: 30px;
-  }
-  
-  .people-list {
-      grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .footer-links {
-      flex-direction: column;
-      gap: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .people-list {
-      grid-template-columns: 1fr;
-  }
-}
-
 /* Research page styles */
 .research-container.with-sidebar {
   display: flex;
@@ -414,18 +382,6 @@ body {
   background: #f4f4f4;
   border-left: 5px solid #003366;
   border-radius: 5px;
-}
-
-/* Responsive design for research pages */
-@media (max-width: 768px) {
-  .research-container.with-sidebar {
-      flex-direction: column;
-  }
-  
-  .sidebar {
-      width: 100%;
-      margin-bottom: 20px;
-  }
 }
 
 /* Homepage styles */
@@ -497,23 +453,6 @@ body {
   visibility: hidden;
 }
 
-/* Responsive design for homepage */
-@media (max-width: 768px) {
-  .research-container {
-      flex-direction: column;
-  }
-  
-  .research-item {
-      width: 80%;
-      margin-bottom: 30px;
-  }
-  
-  .section-title {
-      font-size: 36px;
-      margin-left: 20px;
-  }
-}
-
 /* Staff profile page styles */
 .profile-header {
   background-color: #003366;
@@ -565,41 +504,181 @@ body {
   text-decoration: underline;
 }
 
-/* Responsive design for profile pages */
+/* Profile page specific styles - added to not interfere with existing pages */
+/* These styles use namespaced classes to avoid conflicts */
+
+/* Dropdown styles for profile pages */
+.profile-dropdown {
+  margin-top: 40px;
+  margin-bottom: -35px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #f4f4f4;
+  margin-left: -300px; /* Example: shift dropdowns to the left */
+}
+
+.profile-dropdown-header {
+  background-color: #f4f4f4;
+  color: #003366;
+  padding: 12px 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+}
+
+.profile-dropdown-content {
+  padding: 15px;
+  display: none;
+  background-color: #f4f4f4;
+}
+
+.profile-dropdown-content.active {
+  display: block;
+}
+
+.profile-dropdown-arrow {
+  transition: transform 0.3s ease;
+}
+
+.profile-dropdown-header.active .profile-dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+/* Contact info block styles */
+.profile-contact-info {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+/* Publication styling */
+.profile-publication-item {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.profile-publication-item:last-child {
+  border-bottom: none;
+}
+
+/* Project styling */
+.profile-project-item {
+  margin-bottom: 20px;
+}
+
+.profile-project-title {
+  font-weight: bold;
+  color: #003366;
+}
+
+/* Header styles for profile page */
+.profile-main-content h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #003366;
+}
+
+.profile-main-content h3 {
+  font-size: 22px;
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Responsive design */
 @media (max-width: 840px) {
   .profile-container {
-      width: 95%;
-      flex-direction: column;
+    width: 95%;
+    flex-direction: column;
   }
   
   .profile-sidebar, .profile-main-content {
-      width: 100%;
+    width: 100%;
   }
   
   .profile-sidebar {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   
   .profile-img {
-      width: 40%;
-      margin-right: 20px;
+    width: 40%;
+    margin-right: 20px;
   }
   
   .contact, .education, .publications {
-      flex: 1;
-      min-width: 45%;
+    flex: 1;
+    min-width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+  }
+  
+  .text-content, .image-content {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-right: 0;
+  }
+  
+  .image-content {
+    margin-top: 30px;
+  }
+  
+  .people-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .research-container.with-sidebar {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .research-container {
+    flex-direction: column;
+  }
+  
+  .research-item {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+  
+  .section-title {
+    font-size: 36px;
+    margin-left: 20px;
   }
 }
 
 @media (max-width: 600px) {
   .profile-sidebar {
-      flex-direction: column;
+    flex-direction: column;
   }
   
   .profile-img {
-      width: 70%;
-      margin: 0 auto 20px;
+    width: 70%;
+    margin: 0 auto 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .people-list {
+    grid-template-columns: 1fr;
   }
 }
