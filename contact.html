@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Load the last modified date script -->
+    <script src="last-modified.js"></script>    
+    <style>
+        /* Highlight the "Contact Us" link since we're on the Contact page */
+        .nav-bar a[href="contact.html"] {
+            color: rgb(229, 151, 16);
+            font-weight: bold;
+        }
+
+        /* Ensure the content container is also wider */
+        .content {
+            max-width: 1160px; /* Match the opportunities section width */
+            margin: 0 auto;
+            padding: 20px;
+        } 
+        
+        /* Contact page specific styling */
+        .contact-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        /* Using opportunity-card styling from opportunities.html */
+        .opportunity-card {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            border-left: 4px solid #0B3D91;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .opportunity-card h3 {
+            color: #0B3D91;
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+        
+        .team-contacts {
+            margin-top: 2rem;
+        }
+        
+        .team-member {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .team-member img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 1rem;
+        }
+        
+        .member-info {
+            flex: 1;
+        }
+        
+        .member-info h4 {
+            margin: 0 0 0.5rem 0;
+            color: #0B3D91;
+        }
+        
+        .member-info p {
+            margin: 0.25rem 0;
+            font-size: 0.9rem;
+        }
+        
+        .member-info .role {
+            font-style: italic;
+            color: #666;
+        }
+        
+        .map-container {
+            margin-top: 3rem;
+            padding: 1rem;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            border-left: 4px solid #0B3D91;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .map-container h3 {
+            color: #0B3D91;
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+        
+        .map-frame {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header directly included in the page -->
+    <div class="fixed-header">
+        <div class="header">
+            <div class="left-banner">
+                <a href="index.html">
+                    <span class="top-line">MARSHALL SPACE FLIGHT CENTER</span>
+                    <span class="middle-line">ST 13: HELIOPHYSICS AND PLANETARY SCIENCE BRANCH</span>
+                    <span class="bottom-line">HELIOPHYSICS and PLANETARY SCIENCE AT MSFC</span>
+                </a>
+            </div>
+            <div class="right-banner">
+                <a href="index.html#news">News</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+        <div class="nav-bar">
+            <a href="about.html">About Us</a>
+            <a href="people.html">People</a>
+            <a href="opportunities.html">Opportunities</a>
+            <a href="index.html#research_areas">Research</a>
+        </div>
+    </div>
+
+    <div style="margin-top: 60px;"><!-- Adjust this value based on the height of your fixed header -->
+    </div>
+
+    <div class="hero-section">
+        <div class="hero-text">Contact Us</div>
+    </div>
+
+    <div style="margin-top: -110px;"></div>
+
+    <div class="content">
+        <h2>Contact the Heliophysics and Planetary Science Branch</h2>
+        <p>
+            Thank you for your interest in the Heliophysics and Planetary Science Branch (ST13) at NASA's Marshall Space Flight Center. We welcome inquiries about our research, collaboration opportunities, and educational programs.
+        </p>
+        
+        <div class="contact-container">
+            <!-- Branch Information Card -->
+            <div class="opportunity-card">
+                <h3>Branch Information</h3>
+                <p><strong>NASA Marshall Space Flight Center</strong></p>
+                <p>Heliophysics and Planetary Science Branch (ST13)</p>
+                <p>Robert "Bud" Cramer Research Hall</p>
+                <p>320 Sparkman Dr NW</p>
+                <p>Huntsville, AL 35805</p>
+            </div>
+            
+            <!-- Combined Inquiries Card -->
+            <!-- 
+            <div class="opportunity-card">
+                <h3>Contact Information</h3>
+                <div style="margin-bottom: 1.5rem;">
+                    <p><strong>Email:</strong> <a href="mailto:st13-info@nasa.gov">st13-info@nasa.gov</a></p>
+                    <p><strong>Phone:</strong> (256) 555-1234</p>
+                </div>
+                
+
+                <div style="margin-bottom: 1.5rem;">
+                    <h4 style="color: #0B3D91; margin-bottom: 0.5rem;">Research Collaborations</h4>
+                    <p>For information about research collaborations and partnerships:</p>
+                    <p><strong>Email:</strong> <a href="mailto:st13-collaborations@nasa.gov">st13-collaborations@nasa.gov</a></p>
+                </div>
+                
+                <div style="margin-bottom: 1.5rem;">
+                    <h4 style="color: #0B3D91; margin-bottom: 0.5rem;">Student Opportunities</h4>
+                    <p>For inquiries about internships and student research opportunities:</p>
+                    <p><strong>Email:</strong> <a href="mailto:st13-education@nasa.gov">st13-education@nasa.gov</a></p>
+                </div>
+                
+            </div>
+           -->
+            
+            <!-- Media Inquiries Card 
+            <div class="opportunity-card">
+                <h3>Media Inquiries</h3>
+                <p>For media-related questions, please contact:</p>
+                <p><strong>MSFC Public Affairs Office</strong></p>
+                <p><strong>Email:</strong> <a href="mailto:msfc-public-affairs@nasa.gov">msfc-public-affairs@nasa.gov</a></p>
+                <p><strong>Phone:</strong> (256) 544-0034</p>
+            </div>
+            -->
+            
+            <!-- Team Contacts Card -->
+            <div class="opportunity-card">
+                <h3>Contact Information</h3>
+                
+                <div class="team-member">
+                    <img src="people_all/michael_zanetti/photo.jpg" alt="Branch Chief"> 
+                    <div class="member-info">
+                        <h4>Adam Kobelski</h4>
+                        <p class="role">Branch Chief</p>
+                        <p><strong>Email:</strong> <a href="mailto:adam.kobelski@nasa.gov">adam.kobelski@nasa.gov</a></p>
+                        <p><strong>Phone:</strong> (256) 555-2301</p>
+                    </div>
+                </div>
+                
+                
+                <div class="team-member">
+                    <img src="people_all/paul_bremner/photo.jpg" alt="Assistant Branch Chief">
+                    <div class="member-info">
+                        <h4>Paul Bremner</h4>
+                        <p class="role">Assistant Branch Chief</p>
+                        <p><strong>Email:</strong> <a href="mailto:paul.m.bremner@nasa.gov">paul.m.bremner@nasa.gov</a></p>
+                        <!--  <p><strong>Phone:</strong> (256) 555-2302</p> 
+                        <p><strong>Research Focus:</strong> Lunar Exosphere, Planetary Surface Processes</p>
+                        -->
+                    </div>
+                </div>
+                
+                <!--
+                <div class="team-member">
+                    <img src="profile-placeholder.png" alt="Heliophysics Lead">
+                    <div class="member-info">
+                        <h4>Dr. Sarah Martinez</h4>
+                        <p class="role">Heliophysics Lead</p>
+                        <p><strong>Email:</strong> <a href="mailto:sarah.martinez@nasa.gov">sarah.martinez@nasa.gov</a></p>
+                        <p><strong>Phone:</strong> (256) 555-2303</p>
+                        <p><strong>Research Focus:</strong> Solar Wind, Space Weather</p>
+                    </div>
+                </div>
+            -->
+            </div>
+            
+            <!-- Map Card -->
+            <div class="map-container">
+                <h3>Find Us</h3>
+                <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.5692920060783!2d-86.65748838473957!3d34.73798128042332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88626c171d80588f%3A0xd080e17f4fea4b88!2s320%20Sparkman%20Dr%20NW%2C%20Huntsville%2C%20AL%2035805!5e0!3m2!1sen!2sus!4v1710878450945!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+                <p><small>320 Sparkman Dr NW, Huntsville, AL 35805</small></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-container">
+        <a href="https://www.nasa.gov/"><img src="nasa-large.png" alt="NASA Logo" class="footer-logo"></a>
+        <div class="footer-content">
+            <p class="last-modified">Last Modified: [any date]</p>
+            <p class="nasa-official">NASA Official: [any name]</p>
+        </div>
+        <div class="footer-links">
+            <div class="column">
+                <a href="http://www.nasa.gov"> NASA Home</a>
+                <a href="http://www.nasa.gov/centers/marshall/home/index.html"> MSFC Home</a>
+            </div>
+            <div class="column">
+                <a href="https://science.nasa.gov/solar-system/">NASA Planetary Science Division</a>
+                <a href="https://science.nasa.gov/heliophysics/">NASA Heliophysics Division</a> 
+            </div>
+            <div class="column">
+                <a href="https://www.hq.nasa.gov/office/pao/FOIA/"> Freedom of Information Act</a>
+                <a href="https://www.nasa.gov/privacy/"> Privacy Policy & Important Notices</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
