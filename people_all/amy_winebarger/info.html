@@ -37,41 +37,115 @@
     
     <div class="profile-container">
         <div class="profile-sidebar">
-            <img src="photo.jpg" alt="Profile Photo" class="profile-img">
+            <img src="photo.jpg" alt="Dr. Amy R. Winebarger" class="profile-img">
         </div>
         
         <div class="profile-main-content">
             <h2>Dr. Amy R. Winebarger</h2>
-            <h3>Researcher</h3>
+            <h3>Heliophysicist</h3>
             
             <!-- Contact Information Block -->
             <div class="profile-contact-info">
                 <p><strong>Contact:</strong></p>
                 <p>
-                    Mail Code ST13<br>
-                    NASA/Marshall Space Flight Center<br>
-                    Huntsville, AL 35812
+                    NASA Marshall Space Flight Center<br>
+                    Huntsville, AL<br>
+                    United States
                 </p>
                 <p>
                     Phone: (256) 961-7509<br>
-                    Fax: (256) 961-7216<br>
                     Email: <a href="mailto:amy.r.winebarger@nasa.gov">amy.r.winebarger@nasa.gov</a>
                 </p>
             </div>
             
+            <!-- Biography Dropdown Menu -->
+            <div class="profile-dropdown">
+                <div class="profile-dropdown-header">
+                    <span>Biography</span>
+                    <span class="profile-dropdown-arrow">▼</span>
+                </div>
+                <div class="profile-dropdown-content">
+                    <p>Dr. Amy R. Winebarger is a solar astrophysicist employed at NASA's Marshall Space Flight Center in Huntsville, Alabama. She specializes in the analysis of observations of the solar corona and compares these observations with computer models. Dr. Winebarger is one of the first female principal investigators for sounding rocket missions and has been in the management team for 9 missions to date.</p>
+                </div>
+            </div>
+            
+            <!-- Research Areas Dropdown Menu -->
+            <div class="profile-dropdown">
+                <div class="profile-dropdown-header">
+                    <span>Research Areas</span>
+                    <span class="profile-dropdown-arrow">▼</span>
+                </div>
+                <div class="profile-dropdown-content">
+                    <ul>
+                        <li><strong>Solar Corona</strong>: Studying the heating, evolution, and eruptions of the solar corona.</li>
+                        <li><strong>Instrument Development</strong>: Building scientific instruments to study the Sun and launching them on sounding rockets.</li>
+                        <li><strong>Observational Analysis</strong>: Analyzing observations of the solar corona and comparing with computer models.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Current Projects Dropdown Menu -->
+            <div class="profile-dropdown">
+                <div class="profile-dropdown-header">
+                    <span>Current Projects</span>
+                    <span class="profile-dropdown-arrow">▼</span>
+                </div>
+                <div class="profile-dropdown-content">
+                    <div class="profile-project-item">
+                        <div class="profile-project-title">Multi-slit Solar Explorer (MUSE)</div>
+                        <p>Heliophysics MidEx mission due to launch in 2027.</p>
+                    </div>
+                    
+                    <div class="profile-project-item">
+                        <div class="profile-project-title">Sounding Rocket Missions</div>
+                        <p>Principal investigator and management team member for solar observation sounding rocket missions.</p>
+                    </div>
 
- 
+                </div>
+            </div>
 
 
-
+            
+            <!-- Professional Experience Dropdown Menu -->
+            <div class="profile-dropdown">
+                <div class="profile-dropdown-header">
+                    <span>Professional Experience</span>
+                    <span class="profile-dropdown-arrow">▼</span>
+                </div>
+                <div class="profile-dropdown-content">
+                    <p><strong>Solar Astrophysicist</strong><br>
+                    NASA Marshall Space Flight Center<br>
+                    Current</p>
+                    
+                    <p><strong>Principal Investigator</strong><br>
+                    Sounding Rocket Missions<br>
+                    Multiple missions to date</p>
+                </div>
+            </div>
+            
+            
+            
+            <!-- Teaching & Outreach Dropdown Menu -->
+            <div class="profile-dropdown">
+                <div class="profile-dropdown-header">
+                    <span>Teaching & Outreach</span>
+                    <span class="profile-dropdown-arrow">▼</span>
+                </div>
+                <div class="profile-dropdown-content">                    
+                    <ul>
+                        <li><strong>Research Experience for Undergraduates</strong>: Co-director of REU program, mentoring undergraduate students in solar physics research</li>
+                        <li><strong>Educational Lectures</strong>: Regularly gives educational lectures about solar physics and space research</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
     
     <div class="footer-container">
         <a href="https://www.nasa.gov/"><img src="../../nasa-large.png" alt="NASA Logo" class="footer-logo"></a>
         <div class="footer-content">
-            <p class="last-modified">Last Modified: <span id="last-modified-date">[any date]</span></p>
-            <p class="nasa-official">NASA Official: Dr. Adam Kobelski</p>
+            <p class="last-modified">Last Modified: <span id="last-modified-date">March 21, 2025</span></p>
+            <p class="nasa-official">NASA Official: Dr. Amy R. Winebarger</p>
         </div>
         <div class="footer-links">
             <div class="column">
@@ -93,7 +167,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // If last-modified.js hasn't updated the date placeholder, this will ensure it happens
-            if (document.querySelector('.last-modified').textContent.includes('[any date]')) {
+            if (document.getElementById('last-modified-date').textContent.includes('[any date]')) {
                 const lastModified = new Date(document.lastModified);
                 const options = { year: 'numeric', month: 'long', day: 'numeric' };
                 document.getElementById('last-modified-date').textContent = lastModified.toLocaleDateString('en-US', options);
