@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Alphonse Sterling - MSFC</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <!-- Load the last modified date script -->
+    <script src="../../last-modified.js"></script>
+    <!-- Load the profile page scripts -->
+    <script src="../../profile-scripts.js"></script>
+</head>
+<body>
+    <div class="fixed-header">
+        <div class="header">
+            <div class="left-banner">
+                <a href="../../index.html">
+                    <span class="top-line">MARSHALL SPACE FLIGHT CENTER</span>
+                    <span class="middle-line">ST 13: HELIOPHYSICS AND PLANETARY SCIENCE BRANCH</span>
+                    <span class="bottom-line">HELIOPHYSICS AND PLANETARY SCIENCE AT MSFC</span>
+                </a>
+            </div>
+            <div class="right-banner">
+                <a href="../../index.html#news">News</a>
+                <a href="../../contact.html">Contact Us</a>
+            </div>
+        </div>
+        <div class="nav-bar">
+            <a href="../../about.html">About Us</a>
+            <a href="../../people.html">People</a>
+            <a href="../../opportunities.html">Opportunities</a>
+            <a href="../../index.html#research_areas">Research</a>
+        </div>
+    </div>
+
+    <div style="margin-top: 120px;"></div>
+    
+    <div class="profile-container">
+        <div class="profile-sidebar">
+            <img src="photo.gif" alt="Profile Photo" class="profile-img">
+        </div>
+        
+        <div class="profile-main-content">
+            <h2>Dr. Alphonse Sterling</h2>
+            <h3>Researcher</h3>
+            
+            <!-- Contact Information Block -->
+            <div class="profile-contact-info">
+                <p><strong>Contact:</strong></p>
+                <p>
+                    Mail Code ST13<br>
+                    NASA/Marshall Space Flight Center<br>
+                    Huntsville, AL 35812
+                </p>
+                <p>
+                    Phone: (256) 961-7625<br>
+                    Fax: (256) 961-7216<br>
+                    Email: <a href="mailto:alphonse.sterling@nasa.gov">alphonse.sterling@nasa.gov</a><br>
+                    Website: <a href="https://solarscience.msfc.nasa.gov/people/sterling/">Dr. Alphonse Sterling's Page</a>
+                </p>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="footer-container">
+        <a href="https://www.nasa.gov/"><img src="../../nasa-large.png" alt="NASA Logo" class="footer-logo"></a>
+        <div class="footer-content">
+            <p class="last-modified">Last Modified: <span id="last-modified-date">[any date]</span></p>
+            <p class="nasa-official">NASA Official: Dr. Adam Kobelski</p>
+        </div>
+        <div class="footer-links">
+            <div class="column">
+                <a href="http://www.nasa.gov"> NASA Home</a>
+                <a href="http://www.nasa.gov/centers/marshall/home/index.html"> MSFC Home</a>
+            </div>
+            <div class="column">
+                <a href="https://science.nasa.gov/solar-system/">NASA Planetary Science Division</a>
+                <a href="https://science.nasa.gov/heliophysics/">NASA Heliophysics Division</a> 
+            </div>
+            <div class="column">
+                <a href="https://www.hq.nasa.gov/office/pao/FOIA/"> Freedom of Information Act</a>
+                <a href="https://www.nasa.gov/privacy/"> Privacy Policy & Important Notices</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Script to ensure last-modified.js executes properly -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // If last-modified.js hasn't updated the date placeholder, this will ensure it happens
+            if (document.querySelector('.last-modified').textContent.includes('[any date]')) {
+                const lastModified = new Date(document.lastModified);
+                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                document.getElementById('last-modified-date').textContent = lastModified.toLocaleDateString('en-US', options);
+            }
+        });
+    </script>
+</body>
+</html>
