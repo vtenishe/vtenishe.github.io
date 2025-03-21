@@ -104,6 +104,7 @@ body {
 }
 
 /* Highlight the active page in nav */
+.nav-bar a.active,
 .nav-bar a[href="contact.html"]:active,
 .nav-bar a[href="about.html"]:active {
   color: rgb(229, 151, 16);
@@ -353,6 +354,7 @@ body {
   margin-top: 20px;
 }
 
+/* Generic button styles - can be used anywhere */
 .custom-button {
   display: block;
   padding: 10px;
@@ -364,11 +366,36 @@ body {
   text-align: center;
   border-radius: 5px;
   transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .custom-button:hover {
   background: white;
   color: #003366;
+}
+
+/* Dropdown indicator - generic and can be used on any dropdown button */
+.custom-button.has-dropdown::after {
+  content: "▼";
+  font-size: 10px;
+  transition: transform 0.3s ease;
+  margin-left: 10px;
+}
+
+.custom-button.active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.custom-button.active.has-dropdown::after {
+  transform: rotate(180deg);
+}
+
+.custom-button.active:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
 }
 
 .research-content {
@@ -507,7 +534,55 @@ body {
 /* Profile page specific styles - added to not interfere with existing pages */
 /* These styles use namespaced classes to avoid conflicts */
 
-/* Dropdown styles for profile pages */
+/* Generic dropdown styles that can be used anywhere */
+.dropdown-container {
+  position: relative;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.dropdown-menu {
+  display: none;
+  background-color: #004a8f;
+  margin-top: 5px;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.dropdown-menu.active {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Animation for smooth appearance */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dropdown menu items - generic styling */
+.dropdown-menu a {
+  display: block;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+}
+
+.dropdown-menu a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding-left: 20px; /* Slight indent on hover */
+}
+
+/* Profile dropdown styles */
 .profile-dropdown {
   margin-top: 40px;
   margin-bottom: -35px;
@@ -649,6 +724,12 @@ body {
   .sidebar {
     width: 100%;
     margin-bottom: 20px;
+  }
+
+  /* Responsive dropdown adjustments */
+  .dropdown-menu {
+    position: relative;
+    width: 100%;
   }
   
   .research-container {
