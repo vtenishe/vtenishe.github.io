@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../../styles.css">
     <!-- Load the last modified date script -->
     <script src="../../last-modified.js"></script>
+    <!-- Load the dropdown functionality script -->
+    <script src="../../dropdown.js"></script>
     <style>
         /* Highlight the "Research" link since we're on the Research page */
         .nav-bar a[href="../../index.html#research_areas"] {
@@ -56,9 +58,31 @@
         <div class="sidebar">
             <h2>Main Directions of Heliophysics Research</h2>
             <div class="button-container">
-                <a href="sep-heliosphere.html" class="custom-button">SEPs in the Heliosphere</a>
-                <a href="sep-geospace.html" class="custom-button">SEPs in the Geospace</a>
-                <a href="moon-to-mars.html" class="custom-button">Moon-to-Mars Architecture</a>
+                <!-- Added dropdown functionality to existing buttons -->
+                <div class="dropdown-container">
+                    <a href="javascript:void(0);" class="custom-button" onclick="toggleDropdown('sep-gcr-dropdown')">SEPs and GCRs</a>
+                    <div id="sep-gcr-dropdown" class="dropdown-menu">
+                        <a href="heliosphere/solar-flares.html">Heliosphere</a>
+                        <a href="heliosphere/cmes.html">Geospace</a>
+                    </div>
+                </div>
+
+                <div class="dropdown-container">
+                    <a href="javascript:void(0);" class="custom-button" onclick="toggleDropdown('moon-mars-dropdown')">Moon-to-Mars Architecture</a>
+                    <div id="moon-mars-dropdown" class="dropdown-menu">
+                        <a href="moon-mars/radiation-hazards.html">Radiation Hazards</a>
+                        <a href="moon-mars/artemis-mission.html">Artemis Mission</a>
+                        <a href="moon-mars/mars-transit.html">Mars Transit</a>
+                        <a href="moon-mars/habitat-shielding.html">Habitat Shielding</a>
+                    </div>
+                </div>
+
+                <div class="dropdown-container">
+                    <a href="javascript:void(0);" class="custom-button" onclick="toggleDropdown('missions-dropdown')">Missions and Instrumentations</a>
+                    <div id="missions-dropdown" class="dropdown-menu">
+                        <a href="mission_MUSE.html">MUSE</a>
+                    </div>
+                </div>              
             </div>
         </div>
         
