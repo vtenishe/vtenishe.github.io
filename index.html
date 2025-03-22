@@ -10,6 +10,8 @@
     <script src="st13-news-script.js"></script>
     <!-- Load the last modified date script -->
     <script src="last-modified.js"></script>
+    <!-- Load the reusable dropdown script -->
+    <script src="dropdown.js"></script>
 </head>
 <body>
     <!-- Fixed header container -->
@@ -54,20 +56,95 @@
         <div id="research_areas" style="position: relative; top: -130px; visibility: hidden;"></div>
         <div class="section">
             <h2 class="section-title">Research Areas</h2>
-            <p>Research areas and directions in ST 13.</p>
+            <div class="mission-section" style="margin-top: 10px; margin-bottom: 20px;">
+                <h3 style="color: #0B3D91; margin-top: 0; border-bottom: 1px solid #ddd; padding-bottom: 0.5rem;">Research conducted at ST 13 includes important heliophysics and planetary science investigations and missions, and spans from surface of the planetary satellites to the plasma in the solar system, to the Sun dynamics and that of space radiation in the heliosphere and geospace.</h3>
+            </div>
+            
+            <!-- Combined Research Section -->
+            <div class="research-container with-sidebar">
+                <div class="sidebar">
+                    <h2>Research Areas</h2>
+                    <div class="button-container">
+                        <!-- Modeling and Fundamental Research -->
+                        <div class="dropdown-container">
+                            <a href="javascript:void(0);" class="custom-button" onclick="toggleDropdown('modeling-dropdown')">Numerical Modeling and Methods</a>
+                            <div id="modeling-dropdown" class="dropdown-menu">
+                                <a href="research/planetary/modeling/particle-simulations.html">Particle Simulations</a>
+                            </div>
+                        </div>
 
-            <div class="research-container">
-                <div class="research-item">
-                    <a href="research/planetary/info.html">
-                        <img src="illustration_planetary.png" alt="Planetary Science">
-                        <p><u>Planetary Science</u></p>
-                    </a>
+                        <!-- The Moon Section -->
+                        <div class="dropdown-container">
+                            <a href="javascript:void(0);" class="custom-button" onclick="toggleDropdown('moon-dropdown')">The Moon</a>
+                            <div id="moon-dropdown" class="dropdown-menu">
+                                <a href="research/planetary/exospheres/lunar-plasma.html">Lunar Plasma Environment</a>
+                                <a href="research/planetary/exospheres/ladee-mission.html">Lunar Exosphere</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Other Planetary Satellites -->
+                        <div class="dropdown-container">
+                            <a href="javascript:void(0);" class="custom-button" onclick="toggleDropdown('satellites-dropdown')">Other Planetary Satellites</a>
+                            <div id="satellites-dropdown" class="dropdown-menu">
+                                <a href="research/planetary/exospheres/europa.html">Europa's Exosphere</a>
+                                <a href="research/planetary/exospheres/solar-wind.html">Enceladus' Exosphere</a>
+                            </div>
+                        </div>
+
+                        <!-- Solar Environment -->
+                        <div class="dropdown-container">
+                            <a href="javascript:void(0);" class="custom-button" onclick="toggleDropdown('sep-gcr-dropdown')">SEPs and GCRs</a>
+                            <div id="sep-gcr-dropdown" class="dropdown-menu">
+                                <a href="research/helio/heliosphere/solar-flares.html">Heliosphere</a>
+                                <a href="research/helio/heliosphere/cmes.html">Geospace</a>
+                            </div>
+                        </div>
+
+                        <!-- Combined Missions Section -->
+                        <div class="dropdown-container">
+                            <a href="javascript:void(0);" class="custom-button" onclick="toggleDropdown('missions-dropdown')">Planetary and Heliophysics Missions</a>
+                            <div id="missions-dropdown" class="dropdown-menu">
+                                <a href="research/helio/moon-mars/artemis-mission.html">Moon-to-Mars Architecture</a>
+                                <a href="research/planetary/mission_comet_interseptor.html">Comet Interseptor</a>
+                                <a href="research/helio/mission_MUSE.html">Multi-slit Solar Explorer (MUSE)</a>
+                                <a href="research/helio/mission_sounding_rocket.html">Sounding Rocket Missions</a>
+                            </div>
+                        </div>
+
+                        <!-- Labs and Research Groups -->
+                        <div class="dropdown-container">
+                            <a href="javascript:void(0);" class="custom-button" onclick="toggleDropdown('labs-dropdown')">Labs and Research Groups</a>
+                            <div id="labs-dropdown" class="dropdown-menu">
+                                <a href="research/planetary/lab_dusty_plasma.html">Dusty Plasma Laboratory (DPL)</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="research-item">
-                    <a href="research/helio/info.html">
-                        <img src="illustration_helio.png" alt="Heliophysics">
-                        <p><u>Heliophysics</u></p>
-                    </a>
+                
+                <div class="research-content">
+                    <!-- Lunar Research -->
+                    <div class="description">
+                        <h3>Lunar Science</h3>
+                        <p>Investigating the Moon's exosphere, plasma environment, and surface interactions with solar radiation, supporting Artemis and future lunar exploration.</p>
+                    </div>
+                    
+                    <!-- Planetary Science Descriptions -->
+                    <div class="description">
+                        <h3>Planetary Satellites</h3>
+                        <p>Studying the atmospheres and surfaces of icy moons like Europa and Enceladus, with focus on their potential subsurface oceans and interaction with their planetary environments.</p>
+                    </div>
+                    
+                    <!-- Heliophysics Descriptions -->
+                    <div class="description">
+                        <h3>Solar-Planetary Interactions</h3>
+                        <p>Investigating how solar energetic particles (SEPs) and cosmic rays affect planetary environments, with applications to space weather prediction and radiation protection for astronauts.</p>
+                    </div>
+                    
+                    <!-- Missions Research -->
+                    <div class="description">
+                        <h3>Missions and Instrumentation</h3>
+                        <p>Developing cutting-edge instruments and contributing to space missions that advance our understanding of the solar system, from the Sun to planetary bodies and their moons.</p>
+                    </div>
                 </div>
             </div>
         </div>
