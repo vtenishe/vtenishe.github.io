@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icy Moons Exosphere Research - MSFC ST 13</title>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="../../styles.css">
+    <!-- Last modified date script -->
+    <script src="../../last-modified.js"></script>
+    <!-- Dropdown functionality script -->
+    <script src="../../dropdown.js"></script>
+    <!-- Page-specific styles -->
+    <style>
+        /* Highlight the Research link in navigation */
+        .nav-bar a[href="../../index.html#research_areas"] {
+            color: rgb(229, 151, 16);
+            font-weight: bold;
+        }
+        
+        /* Custom layout for this page */
+        .lab-container {
+            display: flex;
+            padding: 40px;
+            gap: 30px;
+            align-items: flex-start;
+        }
+        
+        .lab-content {
+            flex: 0 0 66%; /* Takes up 2/3 of the container width */
+            max-width: 66%;
+        }
+        
+        .lab-image {
+            flex: 0 0 34%; /* Takes up 1/3 of the container width */
+            max-width: 34%;
+            position: sticky;
+            top: 100px;
+            margin-top: -30px;
+            padding-top: -150px;
+            align-self: flex-start;
+        }
+        
+        .lab-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Lab info box styling */
+        .lab-info-box {
+            background-color: #f8f8f8;
+            border-left: 4px solid #0B3D91;
+            padding: 1.5rem;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .lab-info-box h3 {
+            color: #0B3D91;
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+        
+        .lab-info-item {
+            display: flex;
+            margin-bottom: 8px;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            width: 120px;
+            flex-shrink: 0;
+        }
+        
+        /* Section styling */
+        .lab-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            border-left: 4px solid #0B3D91;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .lab-section h2 {
+            color: #0B3D91;
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .lab-container {
+                flex-direction: column;
+            }
+            
+            .lab-content, .lab-image {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            
+            .lab-image {
+                position: relative;
+                top: 0;
+                margin-bottom: 20px;
+                order: -1; /* Places image above content on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Header Section -->
+    <div class="fixed-header">
+        <div class="header">
+            <div class="left-banner">
+                <a href="../../index.html">
+                    <span class="top-line">MARSHALL SPACE FLIGHT CENTER</span>
+                    <span class="middle-line">ST 13: HELIOPHYSICS AND PLANETARY SCIENCE BRANCH</span>
+                    <span class="bottom-line">HELIOPHYSICS AND PLANETARY SCIENCE AT MSFC</span>
+                </a>
+            </div>
+            <div class="right-banner">
+                <a href="../../contact.html">Contact Us</a>
+            </div>
+        </div>
+        <div class="nav-bar">
+            <a href="../../people.html">People</a>
+            <a href="../../opportunities.html">Opportunities</a>
+            <a href="../../index.html#research_areas">Research</a>
+        </div>
+    </div>
+    
+    <!-- Spacing for fixed header -->
+    <div style="margin-top: 60px;"></div>
+    
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-text">Icy Moons Exosphere Research</div>
+    </div>
+    
+    <!-- Adjust spacing -->
+    <div style="margin-top: -130px;"></div>
+    
+    <!-- Main Content Area with Modified Layout -->
+    <div class="lab-container">
+        <!-- Text content area (2/3 of the width) -->
+        <div class="lab-content">
+            <!-- Lab key information box -->
+            <div class="lab-info-box">
+                <h3>Research Overview</h3>
+                <div class="lab-info-item">
+                    <span class="info-label">Focus:</span>
+                    <span>Modeling exosphere-magnetosphere interactions</span>
+                </div>
+                <div class="lab-info-item">
+                    <span class="info-label">Targets:</span>
+                    <span>Europa, Ganymede, Enceladus, and other icy moons</span>
+                </div>
+                <div class="lab-info-item">
+                    <span class="info-label">Methods:</span>
+                    <span>Direct Simulation Monte Carlo (DSMC), Multi-fluid MHD</span>
+                </div>
+                <div class="lab-info-item">
+                    <span class="info-label">Applications:</span>
+                    <span>Europa Clipper, JUICE missions, planetary science</span>
+                </div>
+            </div>
+
+            <!-- Research Objectives Section -->
+            <div class="lab-section">
+                <h2>Research Objectives</h2>
+
+                <p>Icy moons within our solar system harbor some of the most promising environments for potential habitability beyond Earth. These moons, particularly those orbiting Jupiter and Saturn, exist within complex magnetospheric environments that significantly influence their surface and atmospheric processes.</p>
+                
+                <p>Our research focuses on developing sophisticated physical models of the tenuous atmospheres (exospheres) around icy moons and how they interact with their parent planets' magnetospheres. Understanding these interactions is critical for interpreting spacecraft data and advancing knowledge about these fascinating worlds.</p>
+
+                <p>The primary objectives of our research include:</p>
+                <ul>
+                    <li>Developing physics-based models for neutral gas environments around icy satellites</li>
+                    <li>Simulating plasma-neutral interactions in varying magnetospheric conditions</li>
+                    <li>Investigating sputtering and radiolysis processes on icy surfaces</li>
+                    <li>Modeling column densities and spatial distributions of different species</li>
+                    <li>Supporting ongoing and upcoming missions like Europa Clipper and JUICE</li>
+                </ul>
+                
+                <p>Our modeling approach uses the Direct Simulation Monte Carlo (DSMC) method, which is capable of simulating conditions ranging from collisionless to collisional regimes. This versatility is essential for accurately representing the varying atmospheric conditions around icy moons.</p>
+            </div>
+            
+            <!-- Modeling Approaches Section -->
+            <div class="lab-section">
+                <h2>Modeling Approaches</h2>
+                
+                <p>Our research employs several complementary modeling approaches:</p>
+                
+                <h3>Direct Simulation Monte Carlo (DSMC)</h3>
+                <p>The DSMC method tracks the motion and collisions of individual particles, making it ideal for simulating tenuous atmospheres. Our implementation includes:</p>
+                <ul>
+                    <li>Multi-species collision modeling with appropriate cross-sections</li>
+                    <li>Photo-chemical reactions and electron impact processes</li>
+                    <li>Surface interactions including sputtering and radiolysis</li>
+                    <li>Non-equilibrium processes critical in low-density environments</li>
+                </ul>
+                
+                <h3>Magnetohydrodynamic (MHD) Models</h3>
+                <p>To understand the plasma environment surrounding icy moons, we employ multi-fluid MHD models that:</p>
+                <ul>
+                    <li>Simulate the interaction between magnetospheric plasma and the moon's exosphere</li>
+                    <li>Track charged particle behavior in complex electromagnetic fields</li>
+                    <li>Model the impact of varying magnetospheric conditions (lobe, plasma sheet, transition regions)</li>
+                    <li>Calculate surface impact locations of charged particles</li>
+                </ul>
+                
+                <h3>Coupled Neutral-Plasma Models</h3>
+                <p>Our innovative approach combines neutral gas modeling with plasma simulations to provide a comprehensive picture of exosphere-magnetosphere interactions. These coupled models:</p>
+                <ul>
+                    <li>Calculate neutral gas production from charged particle impacts</li>
+                    <li>Track the spatial distribution of various species (H₂O, O₂, H₂, O, OH)</li>
+                    <li>Simulate atmospheric escape and gas redistribution processes</li>
+                    <li>Generate synthetic observations for comparison with spacecraft data</li>
+                </ul>
+            </div>
+            
+            <!-- Current Projects Section -->
+            <div class="lab-section">
+                <h2>Current Projects</h2>
+                
+                <h3>Europa's Coupled Exosphere-Magnetosphere System</h3>
+                <p>We are developing a comprehensive model of Europa's tenuous atmosphere as it interacts with Jupiter's magnetosphere. This work investigates how magnetic field configurations influence neutral gas distributions and how these distributions can be observed through remote sensing. Our findings suggest that O₂ distributions are relatively unaffected by changing magnetic conditions due to the high volatility and short sticking time on the surface, while H₂O distributions show more sensitivity to field configurations.</p>
+                
+                <h3>Modeling of Icy Grain Growth</h3>
+                <p>Building on our understanding of ice radiolysis, we are investigating the formation and growth of icy grains under conditions relevant to the outer solar system, particularly in the environments of Saturn's rings and icy moons like Enceladus and Europa. This research has implications for both scientific questions about charged ice transport and for engineering concerns related to future NASA missions.</p>
+                
+                <h3>Synthetic Observation Generation</h3>
+                <p>To support mission planning and data interpretation, we generate synthetic observations based on our models, including:</p>
+                <ul>
+                    <li>Column density maps for various species</li>
+                    <li>Auroral emission predictions</li>
+                    <li>Spacecraft line-of-sight integrations</li>
+                    <li>Surface weathering patterns</li>
+                </ul>
+                
+                <p>Our work directly supports ongoing missions like Juno and upcoming missions like Europa Clipper and JUICE by providing testable predictions and frameworks for data interpretation.</p>
+            </div>
+        </div>
+        
+        <!-- Image area (1/3 of the width) -->
+        <div class="lab-image">
+            <img src="exosphere_model.png" alt="Europa Exosphere Model">
+            <p style="text-align: center; font-style: italic; margin-top: 10px; font-size: 14px;">Simulation of Europa's exosphere showing neutral gas density distributions around the moon under different magnetospheric conditions.</p>
+            
+            <img src="column_density.png" alt="Column Density Map" style="margin-top: 20px;">
+            <p style="text-align: center; font-style: italic; margin-top: 10px; font-size: 14px;">Synthetic column density map of O₂ as would be observed by spacecraft instruments.</p>
+            
+            <img src="plasma_interaction.png" alt="Plasma Interaction Model" style="margin-top: 20px;">
+            <p style="text-align: center; font-style: italic; margin-top: 10px; font-size: 14px;">Visualization of plasma flow around Europa with magnetic field lines shown in black.</p>
+        </div>
+    </div>
+    
+    <!-- Footer Section -->
+    <div class="footer-container">
+        <a href="https://www.nasa.gov/"><img src="../../nasa-large.png" alt="NASA Logo" class="footer-logo"></a>
+        <div class="footer-content">
+            <p class="last-modified">Last Modified: March 23, 2025</p>
+            <p class="nasa-official">NASA Official: Dr. James Spann</p>
+        </div>
+        <div class="footer-links">
+            <div class="column">
+                <a href="http://www.nasa.gov"> NASA Home</a>
+                <a href="http://www.nasa.gov/centers/marshall/home/index.html"> MSFC Home</a>
+            </div>
+            <div class="column">
+                <a href="https://science.nasa.gov/solar-system/">NASA Planetary Science Division</a>
+                <a href="https://science.nasa.gov/heliophysics/">NASA Heliophysics Division</a>   
+            </div>
+            <div class="column">
+                <a href="#"> Freedom of Information Act</a>
+                <a href="#"> Privacy Policy & Important Notices</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
