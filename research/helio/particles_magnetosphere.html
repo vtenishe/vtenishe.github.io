@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptive Mesh Particle Simulator - MSFC ST 13</title>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="../../styles.css">
+    <!-- Last modified date script -->
+    <script src="../../last-modified.js"></script>
+    <!-- Dropdown functionality script -->
+    <script src="../../dropdown.js"></script>
+    <!-- Page-specific styles -->
+    <style>
+        /* Highlight the Research link in navigation */
+        .nav-bar a[href="../../index.html#research_areas"] {
+            color: rgb(229, 151, 16);
+            font-weight: bold;
+        }
+        
+        /* Custom layout for this page */
+        .lab-container {
+            display: flex;
+            padding: 40px;
+            gap: 30px;
+            align-items: flex-start;
+        }
+        
+        .lab-content {
+            flex: 0 0 66%; /* Takes up 2/3 of the container width */
+            max-width: 66%;
+        }
+        
+        .lab-image {
+            flex: 0 0 34%; /* Takes up 1/3 of the container width */
+            max-width: 34%;
+            position: sticky;
+            top: 100px;
+            margin-top: -30px;
+            padding-top: -150px;
+            align-self: flex-start;
+        }
+        
+        .lab-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Lab info box styling */
+        .lab-info-box {
+            background-color: #f8f8f8;
+            border-left: 4px solid #0B3D91;
+            padding: 1.5rem;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .lab-info-box h3 {
+            color: #0B3D91;
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+        
+        .lab-info-item {
+            display: flex;
+            margin-bottom: 8px;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            width: 120px;
+            flex-shrink: 0;
+        }
+        
+        /* Section styling */
+        .lab-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            border-left: 4px solid #0B3D91;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .lab-section h2 {
+            color: #0B3D91;
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .lab-container {
+                flex-direction: column;
+            }
+            
+            .lab-content, .lab-image {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            
+            .lab-image {
+                position: relative;
+                top: 0;
+                margin-bottom: 20px;
+                order: -1; /* Places image above content on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Header Section -->
+    <div class="fixed-header">
+        <div class="header">
+            <div class="left-banner">
+                <a href="../../index.html">
+                    <span class="top-line">MARSHALL SPACE FLIGHT CENTER</span>
+                    <span class="middle-line">ST 13: HELIOPHYSICS AND PLANETARY SCIENCE BRANCH</span>
+                    <span class="bottom-line">HELIOPHYSICS AND PLANETARY SCIENCE AT MSFC</span>
+                </a>
+            </div>
+            <div class="right-banner">
+                <a href="../../contact.html">Contact Us</a>
+            </div>
+        </div>
+        <div class="nav-bar">
+            <a href="../../people.html">People</a>
+            <a href="../../opportunities.html">Opportunities</a>
+            <a href="../../index.html#research_areas">Research</a>
+        </div>
+    </div>
+    
+    <!-- Spacing for fixed header -->
+    <div style="margin-top: 60px;"></div>
+    
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-text">Adaptive Mesh Particle Simulator (AMPS)</div>
+    </div>
+    
+    <!-- Adjust spacing -->
+    <div style="margin-top: -130px;"></div>
+    
+    <!-- Main Content Area with Modified Layout -->
+    <div class="lab-container">
+        <!-- Text content area (2/3 of the width) -->
+        <div class="lab-content">
+            <!-- Lab key information box -->
+            <div class="lab-info-box">
+                <h3>Model Overview</h3>
+                <div class="lab-info-item">
+                    <span class="info-label">Focus:</span>
+                    <span>Kinetic plasma simulation, particle-in-cell methods</span>
+                </div>
+                <div class="lab-info-item">
+                    <span class="info-label">Applications:</span>
+                    <span>Planetary atmospheres, space plasma, magnetospheric physics</span>
+                </div>
+                <div class="lab-info-item">
+                    <span class="info-label">Key Feature:</span>
+                    <span>Adaptive, block-based grid structure with dynamic allocation</span>
+                </div>
+
+                <div style="position: absolute; left: 650px; top: 60%; transform: translateY(-50%);">
+                    <a href="../../people_all/valeriy_tenishev/info.html">
+                        <img src="../../people_all/valeriy_tenishev/photo.jpg" alt="Dr. Valeriy Tenishev" 
+                            style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- Research Objectives Section -->
+            <div class="lab-section">
+                <h2>Model Description</h2>
+
+                <p>The Adaptive Mesh Particle Simulator (AMPS) is a computer model from the University of Michigan that tracks how particles move in space environments. It works like a smart camera that focuses computing power where it's needed most.</p>
+
+                <p>Key features:</p>
+                <ul>
+                    <li>Adapts to focus on important regions</li>
+                    <li>Models complex 3D shapes like irregular comets</li> 
+                    <li>Simulates both neutral gases and charged particles</li>
+                    <li>Works with other models for complete space weather prediction</li>
+                </ul>
+
+                <p>AMPS is available through NASA's modeling center and is used for studying comets, planetary atmospheres, and solar storms.</p>
+            </div>
+            
+            
+            <!-- Current Projects Section -->
+            <div class="lab-section">
+                <h2>Applications</h2>
+                <p>AMPS has been successfully applied to a wide range of space and planetary physics problems, including:</p>
+                
+                <ul>
+                    <li><strong>Cometary Environments:</strong> Simulating the coma of comet 67P/Churyumov-Gerasimenko as studied by the Rosetta mission</li>
+                    <li><strong>Planetary Exospheres:</strong> Modeling the lunar exosphere and sodium distribution</li>
+                    <li><strong>Planetary Moons:</strong> Investigating the gas distribution in the atmosphere of Enceladus, including the plumes observed by Cassini</li>
+                    <li><strong>Mars Studies:</strong> Examining the hot oxygen corona of Mars and the processes of photochemical escape</li>
+                    <li><strong>Venus Atmosphere:</strong> Simulating the Venus oxygen corona and its variation with solar activity</li>
+                    <li><strong>Solar Energetic Particles (SEPs):</strong> Modeling the acceleration, transport, and interaction of high-energy particles produced during solar flares and coronal mass ejections as they propagate through the heliosphere</li>
+                </ul>
+                
+            </div>
+            
+            <!-- Energetic Particles Section -->
+            <div class="lab-section">
+                <h2>Energetic Particles in the Earth's Magnetosphere</h2>
+                
+                <p>There are two populations of energetic particles that are important for assessing radiation hazard in geospace:</p>
+                
+                <ul>
+                    <li><strong>Galactic Cosmic Rays (GCRs):</strong> According to the current paradigm, GCRs are produced by diffusive shock acceleration in supernova remnants from which they diffuse to fill the whole galaxy. The composition of GCRs is dominated by H+ and He2+ ions. In order to be observed at Earth, these charged particles have to penetrate the electromagnetic fields of the heliosphere.</li>
+                    <li><strong>Solar Energetic Particles (SEPs):</strong> Energetic particles ejected by the Sun in events that are associated with coronal mass ejections (CMEs) and solar flares.</li>
+                </ul>
+                
+                <p>AMPS has been used for simulating propagation of energetic particles in geospace under various geomagnetic conditions. This includes modeling the propagation of GCRs in geospace under the conditions at the magnetopause taken from Badavi et al. (2011). For these simulations, global MHD modeling of the Earth's magnetosphere was performed using SWMF/BATSRUS with the following parameters of the solar wind: vSW = 400 km/s, TSW = 105 K, and nSW = 5 cm−3.</p>
+                
+                <p>Rigidity cutoff is an essential characteristic of the geospace radiation environment. In SI system of units, it is defined as pc/e, where p is the momentum of the particle, c is the speed of light, and e is the electric charge of the particle. Rigidity cutoff is a function of momentum and also implies the minimum energy level that a particle has to have to reach a particular location in geospace.</p>
+                
+                <p>AMPS can calculate cutoff rigidity maps for various geomagnetic conditions:</p>
+                <ul>
+                    <li>For quiet geomagnetic conditions (pSW = 2 nPa, DST = 1 nT, By = −0.08 nT, and Bz = 2 nT)</li>
+                    <li>During geomagnetic storms, such as the March 17, 2015 storm (pSW = 10 nPa, DST = −200 nT, By = −7 nT, and Bz = −10 nT)</li>
+                </ul>
+                
+                <p>The geomagnetic field derived from the T96 model (Tsyganenko, 1995) is used for these calculations. Using about 300 cores, it takes approximately 1.5 hours to calculate a single cutoff rigidity map containing about 10<sup>5</sup> points.</p>
+                
+                <p>For these simulations, energetic particles are traced backward in time, generated at an altitude of 500 km uniformly around the Earth. Due to AMPS' domain decomposition design, the most efficient strategy for parallel calculations is to uniformly inject model particles from the sphere where the cutoff rigidity is calculated and trace them back toward the computational domain boundary.</p>
+            </div>
+        </div>
+        
+        <!-- Image area (1/3 of the width) -->
+        <div class="lab-image">
+            <img src="amps_mesh.jpg" alt="AMPS Adaptive Mesh">
+            <p style="text-align: center; font-style: italic; margin-top: 10px; font-size: 14px;">Example of a computational mesh used in AMPS showing the unique feature of non-rectangular domains tailored to specific problems (adapted from Tenishev et al., 2021).</p>
+            
+            <div style="margin-top: 30px;">
+                <img src="amps_surface.jpg" alt="AMPS Surface Representation">
+                <p style="text-align: center; font-style: italic; margin-top: 10px; font-size: 14px;">Complex surface representation in AMPS showing triangulation of comet 67P/Churyumov-Gerasimenko's nucleus with color representing solar illumination angle (adapted from Tenishev et al., 2021).</p>
+            </div>
+            
+            <div style="margin-top: 30px;">
+                <img src="amps_rigidity_map.jpg" alt="AMPS Rigidity Cutoff Map">
+                <p style="text-align: center; font-style: italic; margin-top: 10px; font-size: 14px;">Rigidity cutoff maps calculated by AMPS at 500 km altitude under quiet geomagnetic conditions (left) and during the March 17, 2015 geomagnetic storm (right). (Tenishev et al., 2020)</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer Section -->
+    <div class="footer-container">
+        <a href="https://www.nasa.gov/"><img src="../../nasa-large.png" alt="NASA Logo" class="footer-logo"></a>
+        <div class="footer-content">
+            <p class="last-modified">Last Modified: March 21, 2025</p>
+            <p class="nasa-official">NASA Official: Dr. James Spann</p>
+        </div>
+        <div class="footer-links">
+            <div class="column">
+                <a href="http://www.nasa.gov"> NASA Home</a>
+                <a href="http://www.nasa.gov/centers/marshall/home/index.html"> MSFC Home</a>
+            </div>
+            <div class="column">
+                <a href="https://science.nasa.gov/solar-system/">NASA Planetary Science Division</a>
+                <a href="https://science.nasa.gov/heliophysics/">NASA Heliophysics Division</a>   
+            </div>
+            <div class="column">
+                <a href="#"> Freedom of Information Act</a>
+                <a href="#"> Privacy Policy & Important Notices</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptive Mesh Particle Simulator - MSFC ST 13</title>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="../../styles.css">
+    <!-- Last modified date script -->
+    <script src="../../last-modified.js"></script>
+    <!-- Dropdown functionality script -->
+    <script src="../../dropdown.js"></script>
+    <!-- Page-specific styles -->
+    <style>
+        /* Highlight the Research link in navigation */
+        .nav-bar a[href="../../index.html#research_areas"] {
+            color: rgb(229, 151, 16);
+            font-weight: bold;
+        }
+        
+        /* Custom layout for this page */
+        .lab-container {
+            display: flex;
+            padding: 40px;
+            gap: 30px;
+            align-items: flex-start;
+        }
+        
+        .lab-content {
+            flex: 0 0 66%; /* Takes up 2/3 of the container width */
+            max-width: 66%;
+        }
+        
+        .lab-image {
+            flex: 0 0 34%; /* Takes up 1/3 of the container width */
+            max-width: 34%;
+            position: sticky;
+            top: 100px;
+            margin-top: -30px;
+            padding-top: -150px;
+            align-self: flex-start;
+        }
+        
+        .lab-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Lab info box styling */
+        .lab-info-box {
+            background-color: #f8f8f8;
+            border-left: 4px solid #0B3D91;
+            padding: 1.5rem;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .lab-info-box h3 {
+            color: #0B3D91;
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+        
+        .lab-info-item {
+            display: flex;
+            margin-bottom: 8px;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            width: 120px;
+            flex-shrink: 0;
+        }
+        
+        /* Section styling */
+        .lab-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            border-left: 4px solid #0B3D91;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .lab-section h2 {
+            color: #0B3D91;
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .lab-container {
+                flex-direction: column;
+            }
+            
+            .lab-content, .lab-image {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            
+            .lab-image {
+                position: relative;
+                top: 0;
+                margin-bottom: 20px;
+                order: -1; /* Places image above content on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Header Section -->
+    <div class="fixed-header">
+        <div class="header">
+            <div class="left-banner">
+                <a href="../../index.html">
+                    <span class="top-line">MARSHALL SPACE FLIGHT CENTER</span>
+                    <span class="middle-line">ST 13: HELIOPHYSICS AND PLANETARY SCIENCE BRANCH</span>
+                    <span class="bottom-line">HELIOPHYSICS AND PLANETARY SCIENCE AT MSFC</span>
+                </a>
+            </div>
+            <div class="right-banner">
+                <a href="../../contact.html">Contact Us</a>
+            </div>
+        </div>
+        <div class="nav-bar">
+            <a href="../../people.html">People</a>
+            <a href="../../opportunities.html">Opportunities</a>
+            <a href="../../index.html#research_areas">Research</a>
+        </div>
+    </div>
+    
+    <!-- Spacing for fixed header -->
+    <div style="margin-top: 60px;"></div>
+    
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-text">Adaptive Mesh Particle Simulator (AMPS)</div>
+    </div>
+    
+    <!-- Adjust spacing -->
+    <div style="margin-top: -130px;"></div>
+    
+    <!-- Main Content Area with Modified Layout -->
+    <div class="lab-container">
+        <!-- Text content area (2/3 of the width) -->
+        <div class="lab-content">
+            <!-- Lab key information box -->
+            <div class="lab-info-box">
+                <h3>Model Overview</h3>
+                <div class="lab-info-item">
+                    <span class="info-label">Focus:</span>
+                    <span>Kinetic plasma simulation, particle-in-cell methods</span>
+                </div>
+                <div class="lab-info-item">
+                    <span class="info-label">Applications:</span>
+                    <span>Planetary atmospheres, space plasma, magnetospheric physics</span>
+                </div>
+                <div class="lab-info-item">
+                    <span class="info-label">Key Feature:</span>
+                    <span>Adaptive, block-based grid structure with dynamic allocation</span>
+                </div>
+
+                <div style="position: absolute; left: 650px; top: 60%; transform: translateY(-50%);">
+                    <a href="../../people_all/valeriy_tenishev/info.html">
+                        <img src="../../people_all/valeriy_tenishev/photo.jpg" alt="Dr. Valeriy Tenishev" 
+                            style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- Research Objectives Section -->
+            <div class="lab-section">
+                <h2>Model Description</h2>
+
+                <p>The Adaptive Mesh Particle Simulator (AMPS) is a computer model from the University of Michigan that tracks how particles move in space environments. It works like a smart camera that focuses computing power where it's needed most.</p>
+
+                <p>Key features:</p>
+                <ul>
+                    <li>Adapts to focus on important regions</li>
+                    <li>Models complex 3D shapes like irregular comets</li> 
+                    <li>Simulates both neutral gases and charged particles</li>
+                    <li>Works with other models for complete space weather prediction</li>
+                </ul>
+
+                <p>AMPS is available through NASA's modeling center and is used for studying comets, planetary atmospheres, and solar storms.</p>
+            </div>
+            
+            
+            <!-- Current Projects Section -->
+            <div class="lab-section">
+                <h2>Applications</h2>
+                <p>AMPS has been successfully applied to a wide range of space and planetary physics problems, including:</p>
+                
+                <ul>
+                    <li><strong>Cometary Environments:</strong> Simulating the coma of comet 67P/Churyumov-Gerasimenko as studied by the Rosetta mission</li>
+                    <li><strong>Planetary Exospheres:</strong> Modeling the lunar exosphere and sodium distribution</li>
+                    <li><strong>Planetary Moons:</strong> Investigating the gas distribution in the atmosphere of Enceladus, including the plumes observed by Cassini</li>
+                    <li><strong>Mars Studies:</strong> Examining the hot oxygen corona of Mars and the processes of photochemical escape</li>
+                    <li><strong>Venus Atmosphere:</strong> Simulating the Venus oxygen corona and its variation with solar activity</li>
+                    <li><strong>Solar Energetic Particles (SEPs):</strong> Modeling the acceleration, transport, and interaction of high-energy particles produced during solar flares and coronal mass ejections as they propagate through the heliosphere</li>
+                </ul>
+                
+            </div>
+            
+            <!-- Energetic Particles Section -->
+            <div class="lab-section">
+                <h2>Energetic Particles in the Earth's Magnetosphere</h2>
+                
+                <p>There are two populations of energetic particles that are important for assessing radiation hazard in geospace:</p>
+                
+                <ul>
+                    <li><strong>Galactic Cosmic Rays (GCRs):</strong> According to the current paradigm, GCRs are produced by diffusive shock acceleration in supernova remnants from which they diffuse to fill the whole galaxy. The composition of GCRs is dominated by H+ and He2+ ions. In order to be observed at Earth, these charged particles have to penetrate the electromagnetic fields of the heliosphere.</li>
+                    <li><strong>Solar Energetic Particles (SEPs):</strong> Energetic particles ejected by the Sun in events that are associated with coronal mass ejections (CMEs) and solar flares.</li>
+                </ul>
+                
+                <p>AMPS has been used for simulating propagation of energetic particles in geospace under various geomagnetic conditions. This includes modeling the propagation of GCRs in geospace under the conditions at the magnetopause taken from Badavi et al. (2011). For these simulations, global MHD modeling of the Earth's magnetosphere was performed using SWMF/BATSRUS with the following parameters of the solar wind: vSW = 400 km/s, TSW = 105 K, and nSW = 5 cm−3.</p>
+                
+                <p>Rigidity cutoff is an essential characteristic of the geospace radiation environment. In SI system of units, it is defined as pc/e, where p is the momentum of the particle, c is the speed of light, and e is the electric charge of the particle. Rigidity cutoff is a function of momentum and also implies the minimum energy level that a particle has to have to reach a particular location in geospace.</p>
+                
+                <p>AMPS can calculate cutoff rigidity maps for various geomagnetic conditions:</p>
+                <ul>
+                    <li>For quiet geomagnetic conditions (pSW = 2 nPa, DST = 1 nT, By = −0.08 nT, and Bz = 2 nT)</li>
+                    <li>During geomagnetic storms, such as the March 17, 2015 storm (pSW = 10 nPa, DST = −200 nT, By = −7 nT, and Bz = −10 nT)</li>
+                </ul>
+                
+                <p>The geomagnetic field derived from the T96 model (Tsyganenko, 1995) is used for these calculations. Using about 300 cores, it takes approximately 1.5 hours to calculate a single cutoff rigidity map containing about 10<sup>5</sup> points.</p>
+                
+                <p>For these simulations, energetic particles are traced backward in time, generated at an altitude of 500 km uniformly around the Earth. Due to AMPS' domain decomposition design, the most efficient strategy for parallel calculations is to uniformly inject model particles from the sphere where the cutoff rigidity is calculated and trace them back toward the computational domain boundary.</p>
+            </div>
+        </div>
+        
+        <!-- Image area (1/3 of the width) -->
+        <div class="lab-image">
+            <img src="amps_mesh.jpg" alt="AMPS Adaptive Mesh">
+            <p style="text-align: center; font-style: italic; margin-top: 10px; font-size: 14px;">Example of a computational mesh used in AMPS showing the unique feature of non-rectangular domains tailored to specific problems (adapted from Tenishev et al., 2021).</p>
+            
+            <div style="margin-top: 30px;">
+                <img src="amps_surface.jpg" alt="AMPS Surface Representation">
+                <p style="text-align: center; font-style: italic; margin-top: 10px; font-size: 14px;">Complex surface representation in AMPS showing triangulation of comet 67P/Churyumov-Gerasimenko's nucleus with color representing solar illumination angle (adapted from Tenishev et al., 2021).</p>
+            </div>
+            
+            <div style="margin-top: 30px;">
+                <img src="amps_rigidity_map.jpg" alt="AMPS Rigidity Cutoff Map">
+                <p style="text-align: center; font-style: italic; margin-top: 10px; font-size: 14px;">Rigidity cutoff maps calculated by AMPS at 500 km altitude under quiet geomagnetic conditions (left) and during the March 17, 2015 geomagnetic storm (right). (Tenishev et al., 2020)</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer Section -->
+    <div class="footer-container">
+        <a href="https://www.nasa.gov/"><img src="../../nasa-large.png" alt="NASA Logo" class="footer-logo"></a>
+        <div class="footer-content">
+            <p class="last-modified">Last Modified: March 21, 2025</p>
+            <p class="nasa-official">NASA Official: Dr. James Spann</p>
+        </div>
+        <div class="footer-links">
+            <div class="column">
+                <a href="http://www.nasa.gov"> NASA Home</a>
+                <a href="http://www.nasa.gov/centers/marshall/home/index.html"> MSFC Home</a>
+            </div>
+            <div class="column">
+                <a href="https://science.nasa.gov/solar-system/">NASA Planetary Science Division</a>
+                <a href="https://science.nasa.gov/heliophysics/">NASA Heliophysics Division</a>   
+            </div>
+            <div class="column">
+                <a href="#"> Freedom of Information Act</a>
+                <a href="#"> Privacy Policy & Important Notices</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
