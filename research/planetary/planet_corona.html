@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars and Venus Coronae Modeling - MSFC ST 13</title>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="../../styles.css">
+    <!-- Last modified date script -->
+    <script src="../../last-modified.js"></script>
+    <!-- Dropdown functionality script -->
+    <script src="../../dropdown.js"></script>
+    <!-- Page-specific styles -->
+    <style>
+        /* Highlight the Research link in navigation */
+        .nav-bar a[href="../../index.html#research_areas"] {
+            color: rgb(229, 151, 16);
+            font-weight: bold;
+        }
+        
+        /* Custom layout for this page */
+        .lab-container {
+            display: flex;
+            padding: 40px;
+            gap: 30px;
+            align-items: flex-start;
+        }
+        
+        .lab-content {
+            flex: 0 0 66%; /* Takes up 2/3 of the container width */
+            max-width: 66%;
+        }
+        
+        .lab-image {
+            flex: 0 0 34%; /* Takes up 1/3 of the container width */
+            max-width: 34%;
+            position: sticky;
+            top: 100px;
+            margin-top: -30px;
+            padding-top: -150px;
+            align-self: flex-start;
+        }
+        
+        .lab-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Lab info box styling */
+        .lab-info-box {
+            background-color: #f8f8f8;
+            border-left: 4px solid #0B3D91;
+            padding: 1.5rem;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .lab-info-box h3 {
+            color: #0B3D91;
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+        
+        .lab-info-item {
+            display: flex;
+            margin-bottom: 8px;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            width: 120px;
+            flex-shrink: 0;
+        }
+        
+        /* Section styling */
+        .lab-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            border-left: 4px solid #0B3D91;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .lab-section h2 {
+            color: #0B3D91;
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .lab-container {
+                flex-direction: column;
+            }
+            
+            .lab-content, .lab-image {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            
+            .lab-image {
+                position: relative;
+                top: 0;
+                margin-bottom: 20px;
+                order: -1; /* Places image above content on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Header Section -->
+    <div class="fixed-header">
+        <div class="header">
+            <div class="left-banner">
+                <a href="../../index.html">
+                    <span class="top-line">MARSHALL SPACE FLIGHT CENTER</span>
+                    <span class="middle-line">ST 13: HELIOPHYSICS AND PLANETARY SCIENCE BRANCH</span>
+                    <span class="bottom-line">HELIOPHYSICS AND PLANETARY SCIENCE AT MSFC</span>
+                </a>
+            </div>
+            <div class="right-banner">
+                <a href="../../contact.html">Contact Us</a>
+            </div>
+        </div>
+        <div class="nav-bar">
+            <a href="../../people.html">People</a>
+            <a href="../../opportunities.html">Opportunities</a>
+            <a href="../../index.html#research_areas">Research</a>
+        </div>
+    </div>
+    
+    <!-- Spacing for fixed header -->
+    <div style="margin-top: 60px;"></div>
+    
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-text">Mars and Venus Coronae Modeling</div>
+    </div>
+    
+    <!-- Adjust spacing -->
+    <div style="margin-top: -130px;"></div>
+    
+    <!-- Main Content Area with Modified Layout -->
+    <div class="lab-container">
+        <!-- Text content area (2/3 of the width) -->
+        <div class="lab-content">
+            <!-- Lab key information box -->
+            <div class="lab-info-box">
+                <h3>Research Overview</h3>
+                <div class="lab-info-item">
+                    <span class="info-label">Focus:</span>
+                    <span>3D physics-based kinetic modeling of planetary hot oxygen coronae</span>
+                </div>
+                <div class="lab-info-item">
+                    <span class="info-label">Targets:</span>
+                    <span>Mars and Venus atmospheres and exospheres</span>
+                </div>
+                <div class="lab-info-item">
+                    <span class="info-label">Methods:</span>
+                    <span>Venus Thermosphere General Circulation Model (VTGCM), Adaptive Mesh Particle Simulator (AMPS)</span>
+                </div>
+                <div class="lab-info-item">
+                    <span class="info-label">Applications:</span>
+                    <span>Solar wind interactions, atmospheric escape, spacecraft data analysis (PVO, Venus Express, MAVEN)</span>
+                </div>
+            </div>
+
+            <!-- Introduction Section -->
+            <div class="lab-section">
+                <h2>Introduction</h2>
+
+                <p>Mars and Venus both possess extended hot oxygen coronae that exhibit complex non-equilibrium conditions. Despite the much lower surface pressure and larger heliocentric distance for Mars than Venus, CO<sub>2</sub> dominates their lower atmospheres, and both planets have surprisingly similar thermospheres and ionospheres. However, the absence of a substantial planetary magnetic field in both cases allows the fast-flowing solar wind plasma to propagate to regions close to the planets, creating unique planetary environments.</p>
+                
+                <p>Quantitative characterization of the hot oxygen populations in these coronae can only be achieved through kinetic modeling, as these regions exist in non-equilibrium. Our research employs a coupled approach using fluid-type models for the thermosphere and ionosphere, combined with kinetic simulations for the hot oxygen corona. This methodology has successfully reproduced spacecraft observations of both planets and provided new insights into the dynamics of their extended atmospheres.</p>
+
+                <p>The key science goals of our modeling work include:</p>
+                <ul>
+                    <li>Understanding the production, transport, and thermalization of hot oxygen atoms in planetary upper atmospheres</li>
+                    <li>Characterizing the variations of hot oxygen coronae with changing solar conditions</li>
+                    <li>Quantifying oxygen escape rates and their contribution to long-term atmospheric evolution</li>
+                    <li>Providing physical explanations for spacecraft measurements from multiple missions</li>
+                    <li>Supporting future mission planning by developing predictive capabilities</li>
+                </ul>
+            </div>
+            
+            <!-- Modeling Approach Section -->
+            <div class="lab-section">
+                <h2>Modeling Approach</h2>
+                
+                <p>Our research employs a sophisticated one-way coupling approach between thermosphere/ionosphere and exosphere models. This coupling provides a comprehensive treatment of the physical processes at work in planetary upper atmospheres.</p>
+                
+                <h3>Thermosphere and Ionosphere Models</h3>
+                <p>For Venus, we utilize the Venus Thermosphere General Circulation Model (VTGCM), a 3D finite difference hydrodynamic model of Venus' upper atmosphere. The VTGCM solves the time-dependent Navier-Stokes equations for the neutral upper atmosphere with diagnostic equations (hydrostatic and continuity) providing geopotential and vertical motion fields. The model domain covers a 5° × 5° latitude-longitude grid with 69 vertical levels extending from approximately 70-300 km at local noon.</p>
+                
+                <p>Key features of the VTGCM include:</p>
+                <ul>
+                    <li>Self-consistent calculations of temperature, zonal and meridional velocity, and mass mixing ratios of specific species</li>
+                    <li>Inclusion of CO<sub>2</sub> 15-μm cooling, IR heating, and EUV heating parameterizations</li>
+                    <li>Photochemical treatment of ionospheric species, particularly O<sub>2</sub><sup>+</sup> which serves as the primary source of hot oxygen</li>
+                    <li>Accounting for sub-grid scale wave effects through empirical parameterizations</li>
+                </ul>
+                
+                <p>For Mars, we employ a similar approach with the Mars Global Ionosphere Thermosphere Model (M-GITM), which has been extensively validated against MAVEN observations.</p>
+                
+                <h3>Kinetic Corona Model (AMPS)</h3>
+                <p>The Adaptive Mesh Particle Simulator (AMPS) is a general-purpose multi-species kinetic code that solves the Boltzmann equation using the Direct Simulation Monte Carlo (DSMC) method. This approach is particularly well-suited for simulating the non-equilibrium conditions in planetary extended coronae.</p>
+                
+                <p>The AMPS implementation includes:</p>
+                <ul>
+                    <li>Tracking of individual particles' motion and collisions within a computational grid</li>
+                    <li>Calculation of hot O production through O<sub>2</sub><sup>+</sup> dissociative recombination with branching ratios and excess energies from laboratory measurements</li>
+                    <li>Thermalization of hot O through collisions with background thermospheric species</li>
+                    <li>Accounting for secondary hot O production through collisions of primary hot O with thermal oxygen</li>
+                    <li>Forward scattering cross-sections for accurate modeling of energy transfer in collisions</li>
+                </ul>
+                
+                <h4>Mars Corona Simulation Methodology</h4>
+                <p>For Mars-specific simulations, we employ an integrated model framework with several sophisticated components:</p>
+                <ul>
+                    <li>One-way coupling between AMPS and the Mars Global Ionosphere Thermosphere Model (M-GITM)</li>
+                    <li>Incorporation of Multi-fluid Magnetohydrodynamic (MF-MHD) model for realistic ionosphere simulation</li>
+                    <li>Use of up-to-date O(³P)-CO₂ collision cross sections calculated from first principles</li>
+                    <li>3-D treatment with detailed spatial resolution to capture global atmospheric asymmetries</li>
+                    <li>Comprehensive tracking of hot O escape probability as a function of altitude and solar zenith angle</li>
+                </ul>
+            </div>
+            
+            <!-- Scientific Findings Section -->
+            <div class="lab-section">
+                <h2>Key Scientific Findings</h2>
+                
+                <h3>Venus Oxygen Corona Variations with Solar Activity</h3>
+                <p>Our 3D kinetic modeling of Venus' hot oxygen corona has revealed significant variations with solar activity. The density of Venus' extended oxygen corona varies by almost a factor of six over a solar cycle. This strong dependence explains why the oxygen corona was detected during Pioneer Venus Orbiter (PVO) measurements at solar maximum but was not observed by Venus Express instruments during solar minimum conditions.</p>
+                
+                <p>Additional key findings for Venus include:</p>
+                <ul>
+                    <li>Good agreement between our model results and PVO observations of the extended hot oxygen corona at solar maximum</li>
+                    <li>Validation of forward scattering cross-sections from Kharchenko et al. (2000) as necessary for reproducing observed corona densities</li>
+                    <li>Hot oxygen dominating the total oxygen population above approximately 400 km altitude</li>
+                    <li>The corona exhibiting primarily axial symmetry around the sunward direction</li>
+                </ul>
+                
+                <h3>Mars Oxygen Corona and Escape</h3>
+                <p>Unlike Venus, Mars' hot oxygen corona contributes significantly to atmospheric escape due to the planet's lower gravity. Our modeling work has quantified Mars' oxygen escape rates and their variations with changing solar and atmospheric conditions.</p>
+                
+                <p>Significant findings for Mars include:</p>
+                <ul>
+                    <li>Hot oxygen escape as the largest contributor to Mars' atmospheric mass loss</li>
+                    <li>Substantial variations in escape rates correlated with solar EUV flux and solar events</li>
+                    <li>Effects of global and regional dust storms on the Martian hot oxygen corona</li>
+                    <li>Good agreement with MAVEN IUVS observations of oxygen emission</li>
+                </ul>
+                
+                <h3>Dust Storm Effects on Mars' Hot Oxygen Corona</h3>
+                <p>Our integrated model framework has revealed important effects of global and regional dust storms on the Martian hot oxygen corona and photochemical escape. Key findings from this research include:</p>
+                
+                <ul>
+                    <li>During dust storms, the ionosphere shifts upward on the dayside, increasing hot O production above the ionospheric peak</li>
+                    <li>However, dust-induced inflation of the neutral upper atmosphere enhances collisional loss of hot O atoms</li>
+                    <li>This effectively suppresses the hot O density, reducing the global photochemical loss rate by approximately 28% during global dust storms</li>
+                    <li>While the magnitude of the hot O corona decreases, its relative density structure remains largely unchanged</li>
+                    <li>Regional dust storms produce similar but less pronounced effects than global dust storms</li>
+                </ul>
+                
+                <p>These findings demonstrate that transient atmospheric events significantly influence escape processes and contribute to long-term atmospheric evolution. Our simulations incorporated state-of-the-art cross sections for O(³P)-CO₂ collisions to accurately capture the thermalization processes.</p>
+                
+                <h3>Comparative Planetology Insights</h3>
+                <p>The similar production mechanisms but different evolutionary outcomes for Mars and Venus provide valuable insights into atmospheric evolution. Our models suggest that while the primary hot O production mechanism (dissociative recombination of O<sub>2</sub><sup>+</sup>) is similar for both planets, Venus' larger mass prevents significant escape, while Mars has experienced substantial oxygen loss throughout its history.</p>
+            </div>
+            
+            <!-- Future Work Section -->
+            <div class="lab-section">
+                <h2>Current and Future Research Directions</h2>
+                
+                <p>Our ongoing research is expanding in several directions:</p>
+                
+                <h3>Solar Wind Interactions</h3>
+                <p>We are extending our modeling to investigate the interactions between the hot oxygen coronae and the solar wind. For Venus, this involves coupling our hot oxygen corona model with magnetohydrodynamic (MHD) simulations to calculate the mass loading coefficient and understand the overall solar wind interaction. This will help interpret observations from both PVO and Venus Express missions.</p>
+                
+                <h3>Multi-Species Modeling</h3>
+                <p>We are expanding our kinetic models to include additional species such as carbon and hydrogen, providing a more comprehensive picture of the full exospheric composition and structure. This multi-species approach will enable better comparisons with remote sensing observations that detect emissions from various species.</p>
+                
+                <h3>Time-Dependent Phenomena</h3>
+                <p>Current modeling efforts are focusing on time-dependent phenomena, including:</p>
+                <ul>
+                    <li>Effects of solar flares and coronal mass ejections on planetary coronae</li>
+                    <li>Seasonal variations in corona structure and density</li>
+                    <li>Response of the corona to varying solar wind conditions</li>
+                </ul>
+                
+                <h3>Solar Events Impact on Mars' Corona</h3>
+                <p>Recent studies on the X8.2-class solar flare of September 10, 2017, revealed important transient processes in the Martian hot oxygen corona:</p>
+                <ul>
+                    <li>Rapid ionospheric response to increased soft X-ray flux (~800%) produced more hot O at lower altitudes</li>
+                    <li>Extreme ultraviolet (EUV) flux enhancements (~170%) altered upper ionospheric and thermospheric densities</li>
+                    <li>Photochemical escape rates initially increased by ~20% but then decreased by ~13% after about 2.5 hours</li>
+                    <li>Time lag between ionospheric and thermospheric responses proved crucial for understanding escape variations</li>
+                    <li>MAVEN observations confirmed model predictions of temperature enhancements and exobase altitude shifts</li>
+                </ul>
+                
+                <p>These ongoing research directions will provide critical insights into planetary atmospheric evolution and support planning for future missions to Mars, Venus, and other terrestrial planets.</p>
+            </div>
+        </div>
+        
+        <!-- Image area (1/3 of the width) -->
+        <div class="lab-image">
+            <img src="vtgcm_amps_coupling.png" alt="VTGCM-AMPS Coupling Approach">
+            <p style="text-align: center; font-style: italic; margin-top: 10px; font-size: 14px;">One-way coupling approach between VTGCM/M-GITM thermosphere/ionosphere models and the AMPS kinetic model for simulating planetary hot oxygen coronae.</p>
+            
+            <img src="venus_corona_solar.png" alt="Venus Corona Solar Variation" style="margin-top: 20px;">
+            <p style="text-align: center; font-style: italic; margin-top: 10px; font-size: 14px;">Density of Venus' hot oxygen corona for solar maximum (top) and solar minimum (bottom) conditions, showing significant variations across the solar cycle.</p>
+            
+            <img src="venus_density_profile.png" alt="Venus Oxygen Density Profile" style="margin-top: 20px;">
+            <p style="text-align: center; font-style: italic; margin-top: 10px; font-size: 14px;">Comparison of model results (lines) with PVO observations (points) showing altitude distribution of hot oxygen in Venus' corona.</p>
+            
+            <img src="mars_corona_solmax.png" alt="Mars Oxygen Corona" style="margin-top: 20px;">
+            <p style="text-align: center; font-style: italic; margin-top: 10px; font-size: 14px;">Simulated hot oxygen corona around Mars, showing the extended distribution that contributes to atmospheric escape.</p>
+        </div>
+    </div>
+    
+    <!-- Footer Section -->
+    <div class="footer-container">
+        <a href="https://www.nasa.gov/"><img src="../../nasa-large.png" alt="NASA Logo" class="footer-logo"></a>
+        <div class="footer-content">
+            <p class="last-modified">Last Modified: March 23, 2025</p>
+            <p class="nasa-official">NASA Official: Dr. James Spann</p>
+        </div>
+        <div class="footer-links">
+            <div class="column">
+                <a href="http://www.nasa.gov"> NASA Home</a>
+                <a href="http://www.nasa.gov/centers/marshall/home/index.html"> MSFC Home</a>
+            </div>
+            <div class="column">
+                <a href="https://science.nasa.gov/solar-system/">NASA Planetary Science Division</a>
+                <a href="https://science.nasa.gov/heliophysics/">NASA Heliophysics Division</a>   
+            </div>
+            <div class="column">
+                <a href="#"> Freedom of Information Act</a>
+                <a href="#"> Privacy Policy & Important Notices</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
