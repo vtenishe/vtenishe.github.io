@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunar Exosphere Modeling - MSFC ST 13</title>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="../../styles.css">
+    <!-- Last modified date script -->
+    <script src="../../last-modified.js"></script>
+    <!-- Dropdown functionality script -->
+    <script src="../../dropdown.js"></script>
+    <!-- Page-specific styles -->
+    <style>
+        /* Highlight the Research link in navigation */
+        .nav-bar a[href="../../index.html#research_areas"] {
+            color: rgb(229, 151, 16);
+            font-weight: bold;
+        }
+        
+        /* Custom layout for this page */
+        .lab-container {
+            display: flex;
+            padding: 40px;
+            gap: 30px;
+            align-items: flex-start;
+        }
+        
+        .lab-content {
+            flex: 0 0 66%; /* Takes up 2/3 of the container width */
+            max-width: 66%;
+        }
+        
+        .lab-image {
+            flex: 0 0 34%; /* Takes up 1/3 of the container width */
+            max-width: 34%;
+            position: sticky;
+            top: 100px;
+            margin-top: -30px;
+            padding-top: -150px;
+            align-self: flex-start;
+        }
+        
+        .lab-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Lab info box styling */
+        .lab-info-box {
+            background-color: #f8f8f8;
+            border-left: 4px solid #0B3D91;
+            padding: 1.5rem;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .lab-info-box h3 {
+            color: #0B3D91;
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+        
+        .lab-info-item {
+            display: flex;
+            margin-bottom: 8px;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            width: 120px;
+            flex-shrink: 0;
+        }
+        
+        /* Section styling */
+        .lab-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            border-left: 4px solid #0B3D91;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .lab-section h2 {
+            color: #0B3D91;
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .lab-container {
+                flex-direction: column;
+            }
+            
+            .lab-content, .lab-image {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            
+            .lab-image {
+                position: relative;
+                top: 0;
+                margin-bottom: 20px;
+                order: -1; /* Places image above content on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Header Section -->
+    <div class="fixed-header">
+        <div class="header">
+            <div class="left-banner">
+                <a href="../../index.html">
+                    <span class="top-line">MARSHALL SPACE FLIGHT CENTER</span>
+                    <span class="middle-line">ST 13: HELIOPHYSICS AND PLANETARY SCIENCE BRANCH</span>
+                    <span class="bottom-line">HELIOPHYSICS AND PLANETARY SCIENCE AT MSFC</span>
+                </a>
+            </div>
+            <div class="right-banner">
+                <a href="../../contact.html">Contact Us</a>
+            </div>
+        </div>
+        <div class="nav-bar">
+            <a href="../../people.html">People</a>
+            <a href="../../opportunities.html">Opportunities</a>
+            <a href="../../index.html#research_areas">Research</a>
+        </div>
+    </div>
+    
+    <!-- Spacing for fixed header -->
+    <div style="margin-top: 60px;"></div>
+    
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-text">Lunar Exosphere Modeling</div>
+    </div>
+    
+    <!-- Adjust spacing -->
+    <div style="margin-top: -130px;"></div>
+    
+    <!-- Main Content Area with Modified Layout -->
+    <div class="lab-container">
+        <!-- Text content area (2/3 of the width) -->
+        <div class="lab-content">
+            <!-- Lab key information box -->
+                        <div class="lab-info-box">
+                <h3>Research Overview</h3>
+                <div class="lab-info-item">
+                    <span class="info-label">Focus:</span>
+                    <span>Lunar exosphere modeling</span>
+                </div>
+                <div class="lab-info-item">
+                    <span class="info-label">Methods:</span>
+                    <span>AMPS simulation, kinetic modeling</span>
+                </div>
+                <div class="lab-info-item">
+                    <span class="info-label">Key Element:</span>
+                    <span>Sodium atoms as tracers</span>
+                </div>
+                <div class="lab-info-item">
+                    <span class="info-label">Applications:</span>
+                    <span>Lunar exploration, space environment</span>
+                </div>
+                
+                <div style="position: absolute; left: 650px; top: 60%; transform: translateY(-50%);">
+                    <a href="../../people_all/valeriy_tenishev/info.html">
+                        <img src="../../people_all/valeriy_tenishev/photo.jpg" alt="Valeriy Tenishev" 
+                            style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Research Objectives Section -->
+            <div class="lab-section">
+                <h2>Research Objectives</h2>
+                <ul>
+                    <li>Model the lunar exosphere (thin atmosphere where gas particles rarely collide)</li>
+                    <li>Identify gas sources and track their movement</li>
+                    <li>Study Earth's gravitational effects on the lunar sodium tail</li>
+                    <li>Support future lunar mission planning</li>
+                </ul>
+            </div>
+            
+            <!-- Methodology Section -->
+            <div class="lab-section">
+                <h2>Modeling Approach</h2>
+                <ul>
+                    <li>Direct Simulation Monte Carlo (DSMC) via Adaptive-Mesh-Particle-Simulator (AMPS)</li>
+                    <li>Tracks individual sodium atoms through their lifecycle</li>
+                    <li>Accounts for lunar rotation, orbital motion, and solar radiation pressure</li>
+                    <li>Uses specialized reference frame following the sodium tail</li>
+                </ul>
+            </div>
+            
+            <!-- Key Findings Section -->
+            <div class="lab-section">
+                <h2>Key Findings</h2>
+                <ul>
+                    <li><strong>Main Source:</strong> Photon-stimulated desorption (sunlight knocking atoms off surface)</li>
+                    <li><strong>Release Rate:</strong> 1.68 × 10<sup>23</sup> sodium atoms/second</li>
+                    <li><strong>Primary Loss:</strong> Surface sticking (69% of atoms return to surface)</li>
+                    <li><strong>Escape Rate:</strong> 5.3 × 10<sup>22</sup> atoms/second</li>
+                    <li><strong>Tail Properties:</strong> Atoms accelerate to 10-13 km/s; Earth's gravity creates observable concentration during new Moon</li>
+                </ul>
+            </div>
+            
+            <!-- Future Work Section -->
+            <div class="lab-section">
+                <h2>Future Research</h2>
+                <ul>
+                    <li>Time-dependent surface sodium reservoir dynamics</li>
+                    <li>Effects of Earth's magnetosphere on release rates</li>
+                    <li>Response to meteor showers and solar storms</li>
+                    <li>Modeling other species (potassium, argon, helium)</li>
+                    <li>Integration of LADEE, ARTEMIS, and LRO mission data</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Image area (1/3 of the width) -->
+        <div class="lab-image">
+            <img src="moon_exosphere_model.png" alt="Lunar sodium exosphere model visualization">
+            <p style="text-align: center; font-style: italic; margin-top: 10px; font-size: 14px;">Modeled density distribution of sodium in the lunar exosphere and tail, showing Earth's gravitational focusing effect.</p>
+            
+            <br><br>
+            
+            <img src="moon_trajectory.jpg" alt="Lunar orbit visualization">
+            <p style="text-align: center; font-style: italic; margin-top: 10px; font-size: 14px;">The complex orbital motion of the Moon creates a spiral-like trajectory that affects exospheric dynamics.</p>
+            
+            <br><br>
+            
+            <img src="moon_surface_model.png" alt="Lunar topology from LRO/LOLA">
+            <p style="text-align: center; font-style: italic; margin-top: 10px; font-size: 14px;">3D lunar topology model used in exosphere simulations, derived from LRO/LOLA laser altimeter observations.</p>
+        </div>
+    </div>
+    
+    <!-- Footer Section -->
+    <div class="footer-container">
+        <a href="https://www.nasa.gov/"><img src="../../nasa-large.png" alt="NASA Logo" class="footer-logo"></a>
+        <div class="footer-content">
+            <p class="last-modified">Last Modified: March 23, 2025</p>
+            <p class="nasa-official">NASA Official: Dr. Mitzi Adams</p>
+        </div>
+        <div class="footer-links">
+            <div class="column">
+                <a href="http://www.nasa.gov"> NASA Home</a>
+                <a href="http://www.nasa.gov/centers/marshall/home/index.html"> MSFC Home</a>
+            </div>
+            <div class="column">
+                <a href="https://science.nasa.gov/solar-system/">NASA Planetary Science Division</a>
+                <a href="https://science.nasa.gov/heliophysics/">NASA Heliophysics Division</a>   
+            </div>
+            <div class="column">
+                <a href="#"> Freedom of Information Act</a>
+                <a href="#"> Privacy Policy & Important Notices</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
