@@ -356,20 +356,22 @@ body {
 
 /* Generic button styles - can be used anywhere */
 .custom-button {
+  text-align: center;
   display: block;
-  padding: 10px;
+  padding: 10px 15px;
   background: transparent;
   color: white;
   text-decoration: none;
   font-weight: bold;
   border: 2px solid white;
-  text-align: center;
   border-radius: 5px;
   transition: all 0.3s ease;
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  width: 100%;
+  padding-right: 35px; /* Add extra padding on right side for the triangle */
 }
 
 .custom-button:hover {
@@ -378,11 +380,14 @@ body {
 }
 
 /* Dropdown indicator - generic and can be used on any dropdown button */
-.custom-button.has-dropdown::after {
+.custom-button.has-dropdown::after,
+.custom-button::after {
   content: "▼";
   font-size: 10px;
-  transition: transform 0.3s ease;
-  margin-left: 10px;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .custom-button.active {
@@ -390,7 +395,7 @@ body {
 }
 
 .custom-button.active.has-dropdown::after {
-  transform: rotate(180deg);
+  transform: rotate(180deg) translateY(50%);
 }
 
 .custom-button.active:hover {
