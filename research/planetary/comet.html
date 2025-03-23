@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cometary Coma Modeling Research - MSFC ST 13</title>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="../../styles.css">
+    <!-- Last modified date script -->
+    <script src="../../last-modified.js"></script>
+    <!-- Dropdown functionality script -->
+    <script src="../../dropdown.js"></script>
+    <!-- Page-specific styles -->
+    <style>
+        /* Highlight the Research link in navigation */
+        .nav-bar a[href="../../index.html#research_areas"] {
+            color: rgb(229, 151, 16);
+            font-weight: bold;
+        }
+        
+        /* Custom layout for this page */
+        .lab-container {
+            display: flex;
+            padding: 40px;
+            gap: 30px;
+            align-items: flex-start;
+        }
+        
+        .lab-content {
+            flex: 0 0 66%; /* Takes up 2/3 of the container width */
+            max-width: 66%;
+        }
+        
+        .lab-image {
+            flex: 0 0 34%; /* Takes up 1/3 of the container width */
+            max-width: 34%;
+            position: sticky;
+            top: 100px;
+            margin-top: -30px;
+            padding-top: -150px;
+            align-self: flex-start;
+        }
+        
+        .lab-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Lab info box styling */
+        .lab-info-box {
+            background-color: #f8f8f8;
+            border-left: 4px solid #0B3D91;
+            padding: 1.5rem;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .lab-info-box h3 {
+            color: #0B3D91;
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+        
+        .lab-info-item {
+            display: flex;
+            margin-bottom: 8px;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            width: 120px;
+            flex-shrink: 0;
+        }
+        
+        /* Section styling */
+        .lab-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            border-left: 4px solid #0B3D91;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .lab-section h2 {
+            color: #0B3D91;
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .lab-container {
+                flex-direction: column;
+            }
+            
+            .lab-content, .lab-image {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            
+            .lab-image {
+                position: relative;
+                top: 0;
+                margin-bottom: 20px;
+                order: -1; /* Places image above content on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Header Section -->
+    <div class="fixed-header">
+        <div class="header">
+            <div class="left-banner">
+                <a href="../../index.html">
+                    <span class="top-line">MARSHALL SPACE FLIGHT CENTER</span>
+                    <span class="middle-line">ST 13: HELIOPHYSICS AND PLANETARY SCIENCE BRANCH</span>
+                    <span class="bottom-line">HELIOPHYSICS AND PLANETARY SCIENCE AT MSFC</span>
+                </a>
+            </div>
+            <div class="right-banner">
+                <a href="../../contact.html">Contact Us</a>
+            </div>
+        </div>
+        <div class="nav-bar">
+            <a href="../../people.html">People</a>
+            <a href="../../opportunities.html">Opportunities</a>
+            <a href="../../index.html#research_areas">Research</a>
+        </div>
+    </div>
+    
+    <!-- Spacing for fixed header -->
+    <div style="margin-top: 60px;"></div>
+    
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-text">Cometary Coma Modeling Research</div>
+    </div>
+    
+    <!-- Adjust spacing -->
+    <div style="margin-top: -130px;"></div>
+    
+    <!-- Main Content Area with Modified Layout -->
+    <div class="lab-container">
+        <!-- Text content area (2/3 of the width) -->
+        <div class="lab-content">
+            <!-- Lab key information box -->
+            <div class="lab-info-box">
+                <h3>Research Overview</h3>
+                <div class="lab-info-item">
+                    <span class="info-label">Focus:</span>
+                    <span>Coupled kinetic modeling of gas and dust in cometary comae</span>
+                </div>
+                <div class="lab-info-item">
+                    <span class="info-label">Targets:</span>
+                    <span>Comet 67P/Churyumov-Gerasimenko and other comets</span>
+                </div>
+                <div class="lab-info-item">
+                    <span class="info-label">Methods:</span>
+                    <span>Direct Simulation Monte Carlo (DSMC), Adaptive Mesh Particle Simulator (AMPS)</span>
+                </div>
+                <div class="lab-info-item">
+                    <span class="info-label">Applications:</span>
+                    <span>Analysis of Rosetta data, dust jet characterization, surface activity mapping</span>
+                </div>
+            </div>
+
+            <!-- Introduction Section -->
+            <div class="lab-section">
+                <h2>Introduction</h2>
+                <p>A cometary coma is a complex and mutually interconnected system consisting of neutral gas, corresponding ions, cometary dust, and plasma. Due to the negligible gravity of a comet's nucleus, a coma has a characteristic size that exceeds the nucleus by many orders of magnitude. This extended dusty gas cloud is primarily affected by molecular collisions, radiation cooling, photolytic, charge-exchange, and impact-ionization reactions.</p>
+                
+                <p>Comet 67P/Churyumov-Gerasimenko was the target of the Rosetta mission, which was the first mission to escort a comet along its way through the Solar system for an extended amount of time. The list of the main scientific objectives of the mission included the global characterization of the comet's nucleus, determination of the surface composition, and a study of the comet's activity development.</p>
+                
+                <p>Our research applies advanced computational modeling techniques to understand the complex interactions between gas and dust in cometary comae. Using Direct Simulation Monte Carlo (DSMC) methods, we can accurately simulate the coma environment across all collisional regimes from the innermost vicinity of the nucleus to the collisionless outer coma.</p>
+            </div>
+            
+            <!-- Dust Characteristics Section -->
+            <div class="lab-section">
+                <h2>Dust in Cometary Comae</h2>
+                
+                <p>Observations of comets have revealed a diverse population of dust particles in their comae. These dust particles can be broadly classified into two major categories:</p>
+                
+                <ul>
+                    <li><strong>Compact particles:</strong> These range in diameter from 0.03 to 1 mm and constitute the majority of the dust mass ejected from the nucleus.</li>
+                    <li><strong>Fluffy particles:</strong> With diameters between 0.2 and 2.5 mm, these particles provide a negligible contribution to the total dust mass ejection rate despite their large size.</li>
+                </ul>
+                
+                <p>In addition, smaller charged nanograins have been detected at cometocentric distances of 50-65 km. The charging of these nanograins is dominated by photoemission, electron collection, and secondary electron emission currents.</p>
+                
+                <p>Analysis of dust particle dynamics has revealed that the submicron particle flux from the solar direction can exceed that from the direction to the comet's nucleus by a factor of 3. This suggests that charging and the Lorentz force may significantly affect dust particle dynamics, especially for smaller particles.</p>
+                
+                <p>For comet 67P/Churyumov-Gerasimenko, measurements indicate a dust-to-gas mass ratio of 4 ± 2, with a differential size distribution power index of approximately -2.5. The total dust-loss rate was estimated to be approximately 7 ± 1 kg s<sup>-1</sup> at heliocentric distances between 3.4-3.6 AU.</p>
+            </div>
+            
+            <!-- Modeling Approach Section -->
+            <div class="lab-section">
+                <h2>Modeling Approach</h2>
+                
+                <p>Our analysis of cometary comae is performed using the Adaptive Mesh Particle Simulator (AMPS) model, a sophisticated Monte Carlo code built within the framework of Direct Simulation Monte Carlo (DSMC) methods. This approach is particularly well-suited for cometary environments where the collision regimes vary from collision-dominated near the nucleus to fully collisionless in the outer coma.</p>
+                
+                <h3>Neutral Gas Modeling</h3>
+                <p>Gas ejection rates from a comet's nucleus are primarily determined by energy balance and heat transfer in the uppermost layer of the nucleus. These rates are highly dependent on the comet's heliocentric distance and surface illumination conditions. The DSMC model accounts for the complex nucleus shape and self-shadowing effects, producing significantly different outgassing patterns on the day and night sides of the nucleus.</p>
+                
+                <p>Our approach combines local illumination calculations with derived surface activity distributions to account for the non-uniformity of surface outgassing. For comet 67P, the water vapor source distribution was derived using a spherical harmonic expansion constrained by spacecraft data. This method has successfully reproduced observed gas distributions in previous studies and forms the foundation of our coupled gas-dust model.</p>
+                
+                <h3>Dust Particle Dynamics</h3>
+                <p>Motion of dust particles in the vicinity of the nucleus is mainly determined by the competing forces of gas drag and gravity. For each dust particle, we calculate its position by integrating the equation of motion:</p>
+                
+                <p style="text-align: center; font-style: italic;">dv<sub>g</sub>/dt = (1/m<sub>g</sub>)(πa<sup>2</sup>C<sub>D</sub>/2)ρ(v-v<sub>g</sub>)|v-v<sub>g</sub>| - F<sub>g</sub></p>
+                
+                <p>Where m<sub>g</sub> is the mass of a dust particle, C<sub>D</sub> is the drag coefficient, F<sub>g</sub> is the gravity force, v is the bulk velocity of the ambient gas, v<sub>g</sub> is the velocity of the dust particle with radius a, and ρ and ρ<sub>g</sub> are the mass densities of the ambient gas and dust particles, respectively.</p>
+                
+                <p>Due to the complex shape of the comet nucleus, gravity calculations require numerical integration over the nucleus volume. To optimize computational efficiency, we precalculate gravity acceleration vectors at computational cell centers and interpolate these values to particle locations during simulation.</p>
+                
+                <p>Our dust simulations use a dust mass density of 1000 kg m<sup>-3</sup> and a power-law size distribution with an index of -2.5. Particle radii in our simulations range from 10<sup>-7</sup> to 10<sup>-3</sup> m. Only particles that can overcome local gravity based on the balance between surface gravity and gas drag are included in the coma model.</p>
+            </div>
+            
+            <!-- Current Research Section -->
+            <div class="lab-section">
+                <h2>Analysis of Dust Jets</h2>
+                
+                <p>A significant focus of our research is the characterization of dust jets observed in cometary comae. These collimated structures provide important insights into the physical mechanisms of dust release, the relationship between gas and dust activity, and the properties of the nucleus surface.</p>
+                
+                <h3>Modeling Methodology</h3>
+                <p>Our analysis of dust jets involves a two-stage approach:</p>
+                <ol>
+                    <li>First, we simulate the dusty coma assuming a constant dust-to-gas mass ratio across the entire nucleus surface, tracking trajectories of hundreds of thousands of individual dust particles.</li>
+                    <li>Second, we calculate synthetic observations of the dust brightness as would be seen from the observing instrument's perspective, comparing these with actual observations to infer jet properties.</li>
+                </ol>
+                
+                <p>The dust brightness is calculated by integrating along the line of sight:</p>
+                <p style="text-align: center; font-style: italic;">I(λ) = F(λ)∫n(r)σ<sub>g</sub>q<sub>s</sub>(λ)(p(g)/4π)ds</p>
+                
+                <p>Where F(λ) is the solar flux at the comet's location, n(r) is the dust number density, σ<sub>g</sub> is the geometrical cross-section of a dust grain, q<sub>s</sub>(λ) is the scattering efficiency, and p(g) is the normalized phase function.</p>
+                
+                <h3>Key Findings from Rosetta VIRTIS-M Data</h3>
+                <p>Our analysis of a prominent dust jet observed by Rosetta VIRTIS-M on 2015 April 12 revealed several important characteristics:</p>
+                <ul>
+                    <li>The dust mass production rate needed to maintain the observed jet was approximately 1.9 kg s<sup>-1</sup>, which accounts for about 2.6% of the total dust ejection from the nucleus.</li>
+                    <li>The jet originated from an area outside of the region with maximum gas production, suggesting that gas and dust source rates are not necessarily proportional across the entire nucleus surface.</li>
+                    <li>The jet's surface footprint corresponds to a relatively small area, approximately 1.3% of the total nucleus surface.</li>
+                    <li>The observed jet showed temporal variability with a lifetime of at least 10 hours, indicating a dynamic dust release process.</li>
+                </ul>
+                
+                <p>These findings challenge the commonly accepted paradigm that dust release is solely determined by local illumination conditions and proportional to gas production. Instead, our results suggest that additional mechanisms, such as thermal stress, internal gas pressure, or structural features like active pits may play important roles in dust jet formation.</p>
+            </div>
+        </div>
+        
+        <!-- Image area (1/3 of the width) -->
+        <div class="lab-image">
+            <img src="water_source.png" alt="67P Water Source Distribution">
+            <p style="text-align: center; font-style: italic; margin-top: 10px; font-size: 14px;">Derived water vapor source rate distribution on the surface of comet 67P/Churyumov-Gerasimenko.</p>
+            
+            <img src="dust_jet.png" alt="Dust Jet Comparison" style="margin-top: 20px;">
+            <p style="text-align: center; font-style: italic; margin-top: 10px; font-size: 14px;">Comparison between observed (top) and modeled (bottom) dust brightness for a jet observed by VIRTIS-M on 2015 April 12.</p>
+            
+            <img src="footprint.png" alt="Dust Trajectory Footprints" style="margin-top: 20px;">
+            <p style="text-align: center; font-style: italic; margin-top: 10px; font-size: 14px;">Surface footprints (red) of dust particle trajectories that contribute to the observed jet, showing their concentration outside the region of maximum gas production.</p>
+            
+            <img src="column_density_comet.png" alt="Column Density Map" style="margin-top: 20px;">
+            <p style="text-align: center; font-style: italic; margin-top: 10px; font-size: 14px;">Comparison between observed (bottom) and modeled (top) water vapor column density from VIRTIS-M observations.</p>
+        </div>
+    </div>
+    
+    <!-- Footer Section -->
+    <div class="footer-container">
+        <a href="https://www.nasa.gov/"><img src="../../nasa-large.png" alt="NASA Logo" class="footer-logo"></a>
+        <div class="footer-content">
+            <p class="last-modified">Last Modified: March 23, 2025</p>
+            <p class="nasa-official">NASA Official: Dr. James Spann</p>
+        </div>
+        <div class="footer-links">
+            <div class="column">
+                <a href="http://www.nasa.gov"> NASA Home</a>
+                <a href="http://www.nasa.gov/centers/marshall/home/index.html"> MSFC Home</a>
+            </div>
+            <div class="column">
+                <a href="https://science.nasa.gov/solar-system/">NASA Planetary Science Division</a>
+                <a href="https://science.nasa.gov/heliophysics/">NASA Heliophysics Division</a>   
+            </div>
+            <div class="column">
+                <a href="#"> Freedom of Information Act</a>
+                <a href="#"> Privacy Policy & Important Notices</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
