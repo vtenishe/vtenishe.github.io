@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Energetic Particles in the Heliosphere - MSFC ST 13</title>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="../../styles.css">
+    <!-- Last modified date script -->
+    <script src="../../last-modified.js"></script>
+    <!-- Dropdown functionality script -->
+    <script src="../../dropdown.js"></script>
+    <!-- Page-specific styles -->
+    <style>
+        /* Highlight the Research link in navigation */
+        .nav-bar a[href="../../index.html#research_areas"] {
+            color: rgb(229, 151, 16);
+            font-weight: bold;
+        }
+        
+        /* Custom layout for this page */
+        .lab-container {
+            display: flex;
+            padding: 40px;
+            gap: 30px;
+            align-items: flex-start;
+        }
+        
+        .lab-content {
+            flex: 0 0 66%; /* Takes up 2/3 of the container width */
+            max-width: 66%;
+        }
+        
+        .lab-image {
+            flex: 0 0 34%; /* Takes up 1/3 of the container width */
+            max-width: 34%;
+            position: sticky;
+            top: 100px;
+            margin-top: -30px;
+            padding-top: -150px;
+            align-self: flex-start;
+        }
+        
+        .lab-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Lab info box styling */
+        .lab-info-box {
+            background-color: #f8f8f8;
+            border-left: 4px solid #0B3D91;
+            padding: 1.5rem;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .lab-info-box h3 {
+            color: #0B3D91;
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+        
+        .lab-info-item {
+            display: flex;
+            margin-bottom: 8px;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            width: 120px;
+            flex-shrink: 0;
+        }
+        
+        /* Section styling */
+        .lab-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            border-left: 4px solid #0B3D91;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .lab-section h2 {
+            color: #0B3D91;
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+        
+        /* Equation styling */
+        .equation {
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .lab-container {
+                flex-direction: column;
+            }
+            
+            .lab-content, .lab-image {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            
+            .lab-image {
+                position: relative;
+                top: 0;
+                margin-bottom: 20px;
+                order: -1; /* Places image above content on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Header Section -->
+    <div class="fixed-header">
+        <div class="header">
+            <div class="left-banner">
+                <a href="../../index.html">
+                    <span class="top-line">MARSHALL SPACE FLIGHT CENTER</span>
+                    <span class="middle-line">ST 13: HELIOPHYSICS AND PLANETARY SCIENCE BRANCH</span>
+                    <span class="bottom-line">HELIOPHYSICS AND PLANETARY SCIENCE AT MSFC</span>
+                </a>
+            </div>
+            <div class="right-banner">
+                <a href="../../contact.html">Contact Us</a>
+            </div>
+        </div>
+        <div class="nav-bar">
+            <a href="../../people.html">People</a>
+            <a href="../../opportunities.html">Opportunities</a>
+            <a href="../../index.html#research_areas">Research</a>
+        </div>
+    </div>
+    
+    <!-- Spacing for fixed header -->
+    <div style="margin-top: 60px;"></div>
+    
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-text">Solar Energetic Particles in the Heliosphere</div>
+    </div>
+    
+    <!-- Adjust spacing -->
+    <div style="margin-top: -130px;"></div>
+    
+    <!-- Main Content Area with Modified Layout -->
+    <div class="lab-container">
+        <!-- Text content area (2/3 of the width) -->
+        <div class="lab-content">
+            <!-- Lab key information box -->
+            <div class="lab-info-box">
+                <h3>Modeling Overview</h3>
+                <div class="lab-info-item">
+                    <span class="info-label">Focus:</span>
+                    <span>Stochastic acceleration and dynamics of solar energetic particles</span>
+                </div>
+                <div class="lab-info-item">
+                    <span class="info-label">Applications:</span>
+                    <span>Space weather forecasting, radiation hazards in space, heliospheric physics</span>
+                </div>
+                <div class="lab-info-item">
+                    <span class="info-label">Key Feature:</span>
+                    <span>Integration of Alfvén Wave turbulence effects into particle transport models</span>
+                </div>
+
+                <div style="position: absolute; left: 650px; top: 60%; transform: translateY(-50%);">
+                    <a href="../../people_all/valeriy_tenishev/info.html">
+                        <img src="../../people_all/valeriy_tenishev/photo.jpg" alt="Dr. Valeriy Tenishev" 
+                            style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
+                    </a>
+                </div>
+            </div>
+
+            <!-- SEP Variability Section -->
+            <div class="lab-section">
+                <h2>Variability of Solar Energetic Particles</h2>
+
+                <p>Solar Energetic Particles (SEPs) are high-energy particles accelerated at the Sun during solar flares and coronal mass ejections (CMEs). These particles show significant variability in their intensity, energy spectrum, and duration, making their prediction challenging for space weather forecasting.</p>
+
+                <p>Key characteristics:</p>
+                <ul>
+                    <li>Rapid flux increases of several orders of magnitude during solar events</li>
+                    <li>Energy-dependent propagation and arrival times at Earth</li>
+                    <li>Extended decay phases that can last days to weeks</li>
+                    <li>Complex interactions with the heliospheric magnetic field</li>
+                </ul>
+
+                <p>Historical SEP events, such as the August 1972 event measured by the IMP-5 spacecraft, demonstrate the dramatic variability in particle flux and energy distribution over time. Understanding this variability is crucial for protecting astronauts and spacecraft from radiation hazards.</p>
+            </div>
+            
+            <!-- AMPS Modeling Framework Section -->
+            <div class="lab-section">
+                <h2>AMPS Modeling Framework</h2>
+                
+                <p>The Adaptive Mesh Particle Simulator (AMPS) provides a computational framework for modeling SEP transport in the heliosphere. The transport equations implemented in AMPS include the Parker equation or the focused transport equation, which can be expressed in Lagrangian coordinates as:</p>
+                
+                <div class="equation">
+                    ∂f/∂t + u·∇f - (1/3)(∇·u)∂f/∂log p = ∇·(κ·∇f),  κ∝BB
+                </div>
+                
+                <p>This approach reduces a spatially 3D problem to a multitude of spatially 1D problems along magnetic field lines, enabling more efficient computation while capturing the essential physics of particle transport.</p>
+                
+                <p>The model accounts for several key physical processes:</p>
+                <ul>
+                    <li>Particle transport along magnetic field lines</li>
+                    <li>Adiabatic deceleration in the expanding solar wind</li>
+                    <li>Scattering by magnetic field fluctuations</li>
+                    <li>Cross-field transport through perpendicular diffusion</li>
+                </ul>
+                
+                <p>The diffusion coefficient used in the model depends on the particle momentum and heliocentric distance, reflecting the changing turbulence conditions throughout the heliosphere.</p>
+            </div>
+            
+            <!-- Mean Free Path Section -->
+            <div class="lab-section">
+                <h2>Particle Mean Free Path</h2>
+                
+                <p>A critical parameter in SEP transport modeling is the particle mean free path, which characterizes the average distance particles travel before being scattered by magnetic field irregularities. In AMPS, the parallel mean free path is parameterized as:</p>
+                
+                <div class="equation">
+                    λ‖ = λ₀(pc/1GeV)^α(r/1AU)^β
+                </div>
+                
+                <p>Where:</p>
+                <ul>
+                    <li>λ₀ = 0.4 AU is a reference mean free path at 1 AU</li>
+                    <li>α = 1/3 represents the momentum dependence</li>
+                    <li>β = 2/3 characterizes the radial dependence</li>
+                    <li>p is particle momentum</li>
+                    <li>c is the speed of light</li>
+                    <li>r is the heliocentric distance</li>
+                </ul>
+                
+                <p>This parameterization captures the observed energy dependence of SEP transport, with higher-energy particles experiencing less scattering (longer mean free paths) than lower-energy particles. The mean free path also increases with distance from the Sun, reflecting the decreasing turbulence levels in the outer heliosphere.</p>
+            </div>
+            
+            <!-- Extended Modeling Domain Section -->
+            <div class="lab-section">
+                <h2>Extended Modeling Domain</h2>
+                
+                <p>One of the key findings from our research is the importance of extending the modeling domain beyond just the near-Earth environment. Transport of SEPs should be modeled up to 4-5 AU beyond Earth's orbit to capture the full dynamics of these particles, particularly the returning particles that contribute to the extended duration of SEP events.</p>
+                
+                <p>Our simulations demonstrate that:</p>
+                <ul>
+                    <li>Particles can travel far into the outer heliosphere before returning to Earth's vicinity</li>
+                    <li>The extended tail of SEP events is significantly influenced by these returning particles</li>
+                    <li>Different energy ranges show varying temporal profiles and spatial distributions</li>
+                    <li>Higher energy particles (>100 MeV) show different behavior than lower energy particles</li>
+                </ul>
+                
+                <p>By including regions beyond 1 AU in our models, we can more accurately predict the duration and intensity of SEP events, which is essential for space weather forecasting and radiation protection strategies for future human space exploration missions.</p>
+            </div>
+            
+            <!-- Perpendicular Diffusion Section -->
+            <div class="lab-section">
+                <h2>Effect of Perpendicular Diffusion</h2>
+                
+                <p>While particle transport primarily occurs along magnetic field lines, perpendicular diffusion across field lines plays an important role in the spatial spread of SEPs in the heliosphere. This cross-field transport is implemented in AMPS through a diffusion tensor that includes both parallel and perpendicular components.</p>
+                
+                <p>Our research shows that perpendicular diffusion:</p>
+                <ul>
+                    <li>Allows particles to access magnetic field lines not directly connected to the source region</li>
+                    <li>Increases the longitudinal spread of SEPs around the Sun</li>
+                    <li>Contributes significantly to the wide extent of SEP events observed by spacecraft at different heliospheric longitudes</li>
+                    <li>Creates a more uniform particle distribution in the inner heliosphere over time</li>
+                </ul>
+                
+                <p>The interplay between parallel transport, perpendicular diffusion, and large-scale magnetic field structure determines the complex temporal and spatial evolution of SEP events observed throughout the heliosphere.</p>
+            </div>
+        </div>
+        
+        <!-- Image area (1/3 of the width) -->
+        <div class="lab-image">
+            <img src="sep_variability.jpg" alt="SEP Variability Chart">
+            <p style="text-align: center; font-style: italic; margin-top: 10px; font-size: 14px;">Integral fluxes from the IMP-5 spacecraft measured during the large August 1972 SEP event, showing different energy channels and the complex temporal evolution. (Tenishev et al., 2022)</p>
+            
+            <div style="margin-top: 30px;">
+                <img src="mean_free_path.jpg" alt="Mean Free Path vs. Radial Distance">
+                <p style="text-align: center; font-style: italic; margin-top: 10px; font-size: 14px;">Mean free path variations with radial distance for different particle energies (50-350 MeV), showing the energy-dependent transport properties in the heliosphere. (Tenishev et al., 2022)</p>
+            </div>
+            
+            <div style="margin-top: 30px;">
+                <img src="particle_density.jpg" alt="Particle Density Time Profiles">
+                <p style="text-align: center; font-style: italic; margin-top: 10px; font-size: 14px;">Time profiles of relative particle density for different energy ranges (48-136 MeV and 136-381 MeV), comparing model results with and without perpendicular diffusion. (Tenishev et al., 2022)</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer Section -->
+    <div class="footer-container">
+        <a href="https://www.nasa.gov/"><img src="../../nasa-large.png" alt="NASA Logo" class="footer-logo"></a>
+        <div class="footer-content">
+            <p class="last-modified">Last Modified: March 23, 2025</p>
+            <p class="nasa-official">NASA Official: Dr. James Spann</p>
+        </div>
+        <div class="footer-links">
+            <div class="column">
+                <a href="http://www.nasa.gov"> NASA Home</a>
+                <a href="http://www.nasa.gov/centers/marshall/home/index.html"> MSFC Home</a>
+            </div>
+            <div class="column">
+                <a href="https://science.nasa.gov/solar-system/">NASA Planetary Science Division</a>
+                <a href="https://science.nasa.gov/heliophysics/">NASA Heliophysics Division</a>   
+            </div>
+            <div class="column">
+                <a href="#"> Freedom of Information Act</a>
+                <a href="#"> Privacy Policy & Important Notices</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
