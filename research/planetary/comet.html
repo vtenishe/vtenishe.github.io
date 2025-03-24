@@ -10,6 +10,17 @@
     <script src="../../last-modified.js"></script>
     <!-- Dropdown functionality script -->
     <script src="../../dropdown.js"></script>
+    <!-- MathJax for equation rendering -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$','$'], ['\\(','\\)']],
+                displayMath: [['$$','$$'], ['\\[','\\]']],
+                processEscapes: true
+            }
+        });
+    </script>
     <!-- Page-specific styles -->
     <style>
         /* Highlight the Research link in navigation */
@@ -91,6 +102,12 @@
             margin-top: 0;
             border-bottom: 1px solid #ddd;
             padding-bottom: 0.5rem;
+        }
+        
+        /* Equation styling */
+        .equation {
+            text-align: center;
+            margin: 20px 0;
         }
         
         /* Responsive adjustments */
@@ -223,13 +240,15 @@
                 <h3>Dust Particle Dynamics</h3>
                 <p>Motion of dust particles in the vicinity of the nucleus is mainly determined by the competing forces of gas drag and gravity. For each dust particle, we calculate its position by integrating the equation of motion:</p>
                 
-                <p style="text-align: center; font-style: italic;">dv<sub>g</sub>/dt = (1/m<sub>g</sub>)(πa<sup>2</sup>C<sub>D</sub>/2)ρ(v-v<sub>g</sub>)|v-v<sub>g</sub>| - F<sub>g</sub></p>
+                <div class="equation">
+                    $$\frac{d\vec{v}_g}{dt} = \frac{1}{m_g}\left(\frac{\pi a^2 C_D}{2}\right)\rho(\vec{v}-\vec{v}_g)|\vec{v}-\vec{v}_g| - \vec{F}_g$$
+                </div>
                 
-                <p>Where m<sub>g</sub> is the mass of a dust particle, C<sub>D</sub> is the drag coefficient, F<sub>g</sub> is the gravity force, v is the bulk velocity of the ambient gas, v<sub>g</sub> is the velocity of the dust particle with radius a, and ρ and ρ<sub>g</sub> are the mass densities of the ambient gas and dust particles, respectively.</p>
+                <p>Where $m_g$ is the mass of a dust particle, $C_D$ is the drag coefficient, $\vec{F}_g$ is the gravity force, $\vec{v}$ is the bulk velocity of the ambient gas, $\vec{v}_g$ is the velocity of the dust particle with radius $a$, and $\rho$ and $\rho_g$ are the mass densities of the ambient gas and dust particles, respectively.</p>
                 
                 <p>Due to the complex shape of the comet nucleus, gravity calculations require numerical integration over the nucleus volume. To optimize computational efficiency, we precalculate gravity acceleration vectors at computational cell centers and interpolate these values to particle locations during simulation.</p>
                 
-                <p>Our dust simulations use a dust mass density of 1000 kg m<sup>-3</sup> and a power-law size distribution with an index of -2.5. Particle radii in our simulations range from 10<sup>-7</sup> to 10<sup>-3</sup> m. Only particles that can overcome local gravity based on the balance between surface gravity and gas drag are included in the coma model.</p>
+                <p>Our dust simulations use a dust mass density of 1000 kg m<sup>-3</sup> and a power-law size distribution with an index of -2.5. Particle radii in our simulations range from $10^{-7}$ to $10^{-3}$ m. Only particles that can overcome local gravity based on the balance between surface gravity and gas drag are included in the coma model.</p>
             </div>
             
             <!-- Current Research Section -->
@@ -246,9 +265,11 @@
                 </ol>
                 
                 <p>The dust brightness is calculated by integrating along the line of sight:</p>
-                <p style="text-align: center; font-style: italic;">I(λ) = F(λ)∫n(r)σ<sub>g</sub>q<sub>s</sub>(λ)(p(g)/4π)ds</p>
+                <div class="equation">
+                    $$I(\lambda) = F(\lambda)\int n(r)\sigma_g q_s(\lambda)\left(\frac{p(g)}{4\pi}\right)ds$$
+                </div>
                 
-                <p>Where F(λ) is the solar flux at the comet's location, n(r) is the dust number density, σ<sub>g</sub> is the geometrical cross-section of a dust grain, q<sub>s</sub>(λ) is the scattering efficiency, and p(g) is the normalized phase function.</p>
+                <p>Where $F(\lambda)$ is the solar flux at the comet's location, $n(r)$ is the dust number density, $\sigma_g$ is the geometrical cross-section of a dust grain, $q_s(\lambda)$ is the scattering efficiency, and $p(g)$ is the normalized phase function.</p>
                 
                 <h3>Key Findings from Rosetta VIRTIS-M Data</h3>
                 <p>Our analysis of a prominent dust jet observed by Rosetta VIRTIS-M on 2015 April 12 revealed several important characteristics:</p>
@@ -273,7 +294,7 @@
             
             <img src="comet_density.png" alt="Neutral Density Comparison" style="margin-top: 20px;">
             <p style="text-align: center; font-style: italic; margin-top: 10px; font-size: 14px;">Densities extracted at the location of the spacecraft from the DSMC model (solid line in black) compared to the ROSINA data for H<sub>2</sub>O (blue), CO<sub>2</sub>
-                (orange), CO (green), and O2 (purple).</p>
+                (orange), CO (green), and O<sub>2</sub> (purple).</p>
         </div>
     </div>
     
