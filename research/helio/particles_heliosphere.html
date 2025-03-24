@@ -174,11 +174,42 @@
                 </div>
             </div>
 
-            <!-- Mean Free Path Section (unchanged) -->
+           <!-- New Section: Transport of SEPs in the Heliosphere -->
+           <div class="lab-section">
+            <h2>Transport of SEPs in the Heliosphere</h2>
+            
+            <p>The presentation compares two transport models that capture different aspects of solar energetic particle (SEP) dynamics in the heliosphere. The Parker transport equation describes the evolution of a nearly isotropic particle population and effectively incorporates large-scale processes, such as spatial diffusion and convection by the solar wind. However, by averaging over the particle pitch angle, the Parker equation inherently smooths over details of pitch-angle scattering and magnetic focusing. In contrast, the focused transport equation retains the pitch-angle dependence of the particle distribution function, enabling a detailed characterization of scattering effects and the impact of magnetic focusing on particle transport. This distinction is critical when modeling the SEP population during various stages of an SEP event, as accounting for anisotropy can significantly influence the predicted particle fluxes.</p>
+            
+            <p>The Parker transport equation is given by:</p>
+            
+            <div class="equation">
+                \[
+                \frac{\partial f}{\partial t} = \nabla \cdot (\kappa \cdot \nabla f) - \mathbf{V}_{sw} \cdot \nabla f + \frac{1}{3} (\nabla \cdot \mathbf{V}_{sw}) \frac{\partial f}{\partial \ln p} + S
+                \]
+            </div>
+
+            <p>Where the terms are defined as follows:</p>
+            <ul>
+                <li>\( f(\mathbf{r}, p, t) \): The particle distribution function, dependent on position (\(\mathbf{r}\)), momentum (\(p\)), and time (\(t\)).</li>
+                <li>\( \frac{\partial f}{\partial t} \): The time rate of change of the particle distribution.</li>
+                <li>\( \nabla \cdot (\kappa \cdot \nabla f) \): Spatial diffusion due to scattering, where \(\kappa\) is the diffusion tensor capturing both parallel and perpendicular diffusion.</li>
+                <li>\( -\mathbf{V}_{sw} \cdot \nabla f \): Convection of particles by the solar wind velocity (\(\mathbf{V}_{sw}\)).</li>
+                <li>\( \frac{1}{3} (\nabla \cdot \mathbf{V}_{sw}) \frac{\partial f}{\partial \ln p} \): Adiabatic energy change due to the divergence of the solar wind, affecting particle momentum.</li>
+                <li>\( S \): A source term representing particle injection, such as from solar flares or coronal mass ejections.</li>
+            </ul>
+            
+            <p>This equation provides a robust framework for modeling the large-scale transport of SEPs, balancing diffusion, convection, and energy losses, though it sacrifices finer details of pitch-angle dynamics addressed by the focused transport approach.</p>
+        </div>
+
+            <!-- Modified Section: Transport and Scattering of SEPs in the Heliosphere -->
             <div class="lab-section">
-                <h2>Particle Mean Free Path</h2>
+                <h2>Scattering of SEPs in the Heliosphere</h2>
                 
-                <p>A critical parameter in SEP transport modeling is the particle mean free path, which characterizes the average distance particles travel before being scattered by magnetic field irregularities. In AMPS, the parallel mean free path is parameterized as:</p>
+                <p>The transport of solar energetic particles (SEPs) through the heliosphere is governed by their interactions with magnetic field irregularities, a process characterized by scattering. Scattering is modeled with a mean free path that depends on both particle momentum and heliocentric distance, reflecting how particles are deflected by turbulent magnetic fields. A critical parameter in SEP transport modeling, the parallel mean free path quantifies the average distance particles travel before undergoing significant scattering events.</p>
+
+                <p>In this framework, particles experience isotropic scattering between two consecutive pitch angle scattering events. This assumes that the deflections in particle trajectories are equally probable in all directions within the local magnetic field frame, driven by small-scale fluctuations. Additionally, the magnetic field lines guiding these particles are defined by the Parker spiral, a structure arising from the Sun’s rotation and the radial expansion of the solar wind, which shapes the large-scale geometry of the heliospheric magnetic field.</p>
+                
+                <p>In AMPS, the parallel mean free path is parameterized as:</p>
                 
                 <div class="equation">
                     \[
@@ -200,7 +231,7 @@
                 <p>This parameterization captures the observed energy dependence of SEP transport, with higher-energy particles experiencing less scattering (longer mean free paths) than lower-energy particles. The mean free path also increases with distance from the Sun, reflecting the decreasing turbulence levels in the outer heliosphere.</p>
             </div>
 
-            <!-- Other lab sections continue unchanged... -->
+ 
         </div>
 
         <div class="lab-image">
@@ -211,7 +242,6 @@
                 <img src="seps_heliosphere.png" alt="Mean Free Path vs. Radial Distance">
                 <p style="text-align: center; font-style: italic; margin-top: 10px; font-size: 14px;">Mean free path variations with radial distance for different particle energies (50-350 MeV), showing the energy-dependent transport properties in the heliosphere. (Tenishev et al., 2022)</p>
             </div>
-
 
             <div style="margin-top: 30px;">
                 <img src="sep_decay.png" alt="Solving Parker Equation">
@@ -241,5 +271,5 @@
             </div>
         </div>
     </div>
-</body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9254722ed906b085',t:'MTc0MjgwMTI0Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
