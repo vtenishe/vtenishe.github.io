@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLPS CP-11 - MSFC ST 13</title>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="../../styles.css">
+    <!-- Last modified date script -->
+    <script src="../../last-modified.js"></script>
+    <!-- Dropdown functionality script -->
+    <script src="../../dropdown.js"></script>
+    <!-- Page-specific styles -->
+    <style>
+        /* Highlight the Research link in navigation */
+        .nav-bar a[href="../../index.html#research_areas"] {
+            color: rgb(229, 151, 16);
+            font-weight: bold;
+        }
+        
+        /* Custom layout for this page */
+        .mission-container {
+            display: flex;
+            padding: 40px;
+            gap: 30px;
+            align-items: flex-start;
+        }
+        
+        .mission-content {
+            flex: 0 0 66%; /* Takes up 2/3 of the container width */
+            max-width: 66%;
+        }
+        
+        .mission-image {
+            flex: 0 0 34%; /* Takes up 1/3 of the container width */
+            max-width: 34%;
+            position: sticky;
+            top: 100px; /* Increased further to shift image down */
+            margin-top: -130px; /* Significantly increased top margin */
+            padding-top: -150px; /* Added padding as well */
+            align-self: flex-start; /* Ensure it aligns to the top of its container */
+        }
+        
+        .mission-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Mission info box styling - based on contact.html opportunity-card style */
+        .mission-info-box {
+            background-color: #f8f8f8;
+            border-left: 4px solid #0B3D91;
+            padding: 1.5rem;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .mission-info-box h3 {
+            color: #0B3D91;
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+        
+        .mission-info-item {
+            display: flex;
+            margin-bottom: 8px;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            width: 120px;
+            flex-shrink: 0;
+        }
+        
+        /* Section styling - based on contact.html styles */
+        .mission-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            border-left: 4px solid #0B3D91;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .mission-section h2 {
+            color: #0B3D91;
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .mission-container {
+                flex-direction: column;
+            }
+            
+            .mission-content, .mission-image {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            
+            .mission-image {
+                position: relative;
+                top: 0;
+                margin-bottom: 20px;
+                order: -1; /* Places image above content on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Header Section -->
+    <div class="fixed-header">
+        <div class="header">
+            <div class="left-banner">
+                <a href="../../index.html">
+                    <span class="top-line">MARSHALL SPACE FLIGHT CENTER</span>
+                    <span class="middle-line">ST 13: HELIOPHYSICS AND PLANETARY SCIENCE BRANCH</span>
+                    <span class="bottom-line">HELIOPHYSICS AND PLANETARY SCIENCE AT MSFC</span>
+                </a>
+            </div>
+            <div class="right-banner">
+                <!-- <a href="#news">News</a> -->
+                <a href="../../contact.html">Contact Us</a>
+            </div>
+        </div>
+        <div class="nav-bar">
+            <!-- <a href="about.html">About Us</a> -->
+            <a href="../../people.html">People</a>
+            <a href="../../opportunities.html">Opportunities</a>
+            <a href="../../index.html#research_areas">Research</a>
+        </div>
+    </div>
+    
+    <!-- Spacing for fixed header -->
+    <div style="margin-top: 60px;"></div>
+    
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-text">CLPS CP-11</div>
+    </div>
+    
+    <!-- Adjust spacing -->
+    <div style="margin-top: -130px;"></div>
+    
+    <!-- Main Content Area with Modified Layout -->
+    <div class="mission-container">
+        <!-- Text content area (2/3 of the width) -->
+        <div class="mission-content">
+            <!-- Mission key information box -->
+            <div class="mission-info-box">
+                <h3>Mission Overview</h3>
+                <div class="mission-info-item">
+                    <span class="info-label">Launch:</span>
+                    <span>2026</span>
+                </div>
+                <div class="mission-info-item">
+                    <span class="info-label">Duration:</span>
+                    <span>2 weeks</span>
+                </div>
+                <div class="mission-info-item">
+                    <span class="info-label">Lead:</span>
+                    <span>Intuitive Machines (IM) with NASA as a partner</span>
+                </div>
+                <div class="mission-info-item">
+                    <span class="info-label">Operations:</span>
+                    <span>NASA Commercial Lunar Payload Services (CLPS)</span>
+                </div>
+                <div class="mission-info-item">
+                    <span class="info-label">Status:</span>
+                    <span>Flight mission in the final stages of lander integration</span>
+                </div>
+            </div>
+
+            <!-- MSFC's Involvement Section -->
+            <div class="mission-section">
+                <div style="display: flex; align-items: flex-start; justify-content: space-between; position: relative;">
+                    <div style="flex: 1; margin-right: 1.5rem;">
+                        <h2>MSFC's Role</h2>
+                        <p>Dr. Haviland is the lead CLPS Project Scientist responsible for integrating payload operations across the NASA suite of science and technology payloads.</p>
+                    </div>
+                    <div style="position: absolute; right: -20px; top: -20px;">
+                        <a href="../../people_all/heidi_haviland/info.html">
+                            <img src="../../people_all/heidi_haviland/photo.jpg" alt="Dr. Haviland" 
+                                style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission Description Section -->
+            <div class="mission-section">
+                <h2>Mission Description</h2>
+                <p>Intuitive Machines' Nova-C lander will deliver four NASA CLPS science payload suites to the Reiner Gamma lunar swirl on the lunar nearside. These include:</p>
+                <ul>
+                    <li><strong>Lunar Vertex (PRISM1a)</strong>, led by the Applied Physics Laboratory: a joint lander-rover investigation, magnetometers on both, an ion-electron spectrometer, cameras and a multispectral microscope on the rover.</li>
+                    <li><strong>Cooperative Autonomous Distributed Robotic Explorers (CADRE)</strong> investigation (led by JPL) consisting of three suitcase sized rovers carrying a Ground Penetrating Radar (GPR).</li>
+                    <li><strong>European Space Agency's MoonLIGHT Pointing Actuator (MPAc)</strong>, a next generation retroreflector.</li>
+                    <li><strong>Korea Astronomy and Space Science Institute (KASI) Lunar Space Environment Monitor (LUSEM)</strong>: a pair of solid state telescopes detecting high energy particles.</li>
+                </ul>
+            </div>
+            
+            <!-- Scientific Objectives Section -->
+            <div class="mission-section">
+                <h2>Scientific Objectives</h2>
+                <p>Key measurements include:</p>
+                <ol>
+                    <li>The origin of lunar magnetic fields and their relation to surface swirls features</li>
+                    <li>Testing autonomous roving capabilities</li>
+                    <li>Measuring the size, shape, and liquid core of the Moon. Also, a target to measure Earth-Moon distance</li>
+                    <li>Charged particles of ≥ 50 keV, separating ions and electrons</li>
+                </ol>
+                <p>Scientists know that lunar swirls exist, but we do not know exactly what they are or how they form. We do know they are related to the Moon's magnetic field. Lunar Vertex will take on some persistent lunar mysteries: the origins of these magnetic anomalies and any relation they might have to the visible swirls. The investigation will look closely at how these areas interact with the solar wind, the high-speed stream of energetic particles from the Sun.</p>
+                <p>For more information, visit <a href="https://science.nasa.gov/lunar-science/clps-deliveries/cp-11/" target="_blank">NASA's CLPS CP-11 page</a>.</p>
+            </div>                   
+        </div>
+        
+        <!-- Image area (1/3 of the width) -->
+        <div class="mission-image">
+            <a href="https://science.nasa.gov/lunar-science/clps-deliveries/cp-11/">
+                <img src="/api/placeholder/400/300" alt="CLPS CP-11 mission illustration">
+            </a>
+            <p style="text-align: center; font-style: italic; margin-top: 10px; font-size: 14px;">CLPS CP-11 mission. Credit: NASA/Intuitive Machines</p>
+        </div>
+    </div>
+    
+    <!-- Footer Section -->
+    <div class="footer-container">
+        <a href="https://www.nasa.gov/"><img src="../../nasa-large.png" alt="NASA Logo" class="footer-logo"></a>
+        <div class="footer-content">
+            <p class="last-modified">Last Modified: March 25, 2025</p>
+            <p class="nasa-official">NASA Official: Dr. Jane Smith</p>
+        </div>
+        <div class="footer-links">
+            <div class="column">
+                <a href="http://www.nasa.gov"> NASA Home</a>
+                <a href="http://www.nasa.gov/centers/marshall/home/index.html"> MSFC Home</a>
+            </div>
+            <div class="column">
+                <a href="https://science.nasa.gov/solar-system/">NASA Planetary Science Division</a>
+                <a href="https://science.nasa.gov/heliophysics/">NASA Heliophysics Division</a>   
+            </div>
+            <div class="column">
+                <a href="#"> Freedom of Information Act</a>
+                <a href="#"> Privacy Policy & Important Notices</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
