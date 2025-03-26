@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Climate Research Buttons</title>
+    <title>Climate Research Tab Buttons</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -25,15 +25,32 @@
             position: relative;
             display: inline-block;
             width: 250px;
-            padding: 10px 20px;
+            padding: 10px 20px 10px 20px;
             background: transparent;
             color: #000;
             text-decoration: none;
             font-weight: bold;
             border: 3px solid #333;
-            border-radius: 0 20px 20px 0;
+            border-radius: 5px 20px 20px 5px;
             overflow: hidden;
             transition: color 0.3s ease;
+        }
+        
+        .custom-button span {
+            position: relative;
+            z-index: 2; /* Ensure text appears above the background */
+        }
+        
+        /* Left edge accent */
+        .custom-button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 100%;
+            background: #333;
+            z-index: 1;
         }
         
         .custom-button::before {
@@ -59,11 +76,11 @@
 </head>
 <body>
     <div class="button-container">
-        <a href="climate-models.html" class="custom-button">Explore Climate Models</a>
-        <a href="weather-systems.html" class="custom-button">Weather Systems</a>
-        <a href="ocean-dynamics.html" class="custom-button">Ocean Dynamics</a>
-        <a href="atmospheric-chemistry.html" class="custom-button">Atmospheric Chemistry</a>
-        <a href="data-assimilation.html" class="custom-button">Data Assimilation</a>
+        <a href="climate-models.html" class="custom-button"><span>Explore Climate Models</span></a>
+        <a href="weather-systems.html" class="custom-button"><span>Weather Systems</span></a>
+        <a href="ocean-dynamics.html" class="custom-button"><span>Ocean Dynamics</span></a>
+        <a href="atmospheric-chemistry.html" class="custom-button"><span>Atmospheric Chemistry</span></a>
+        <a href="data-assimilation.html" class="custom-button"><span>Data Assimilation</span></a>
     </div>
 </body>
 </html>
