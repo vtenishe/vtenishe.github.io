@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Research Buttons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+            max-width: 250px;
+        }
+        
+        .custom-button {
+            position: relative;
+            display: inline-block;
+            width: 250px;
+            padding: 10px 20px;
+            background: transparent;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border: 3px solid #333;
+            border-radius: 0 20px 20px 0;
+            overflow: hidden;
+            transition: color 0.3s ease;
+        }
+        
+        .custom-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(to right, #003366, #0066cc);
+            transition: width 0.4s ease;
+            z-index: -1;
+        }
+        
+        .custom-button:hover {
+            color: white;
+        }
+        
+        .custom-button:hover::before {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <a href="climate-models.html" class="custom-button">Explore Climate Models</a>
+        <a href="weather-systems.html" class="custom-button">Weather Systems</a>
+        <a href="ocean-dynamics.html" class="custom-button">Ocean Dynamics</a>
+        <a href="atmospheric-chemistry.html" class="custom-button">Atmospheric Chemistry</a>
+        <a href="data-assimilation.html" class="custom-button">Data Assimilation</a>
+    </div>
+</body>
+</html>
