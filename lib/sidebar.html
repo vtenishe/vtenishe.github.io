@@ -1,0 +1,151 @@
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      // Get all dropdown toggle elements
+      var dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+      
+      // Add click event listener to each toggle
+      dropdownToggles.forEach(function(toggle) {
+          toggle.addEventListener('click', function(e) {
+              e.preventDefault();
+              
+              // Get the submenu associated with this toggle
+              var submenu = this.nextElementSibling;
+              
+              // Toggle the visibility of the submenu
+              submenu.classList.toggle('submenu-visible');
+              
+              // Optional: Close other open submenus
+              document.querySelectorAll('.submenu').forEach(function(menu) {
+                  if (menu !== submenu && menu.classList.contains('submenu-visible')) {
+                      menu.classList.remove('submenu-visible');
+                  }
+              });
+          });
+      });
+  });
+</script><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Theory & Computational Methods Sidebar</title>
+<style>
+  body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+  }
+  
+  .sidebar {
+      width: 300px;
+  }
+  
+  .menu-title {
+      background: #003366;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 20px 0 0 0;
+      margin-bottom: 0;
+  }
+  
+  .menu-list {
+      border: 1px solid #ccc;
+      padding: 0;
+      margin-top: 0;
+  }
+  
+  .menu-list li {
+      list-style: none;
+      padding: 10px 15px;
+      border-bottom: 1px solid #eee;
+  }
+  
+  .menu-list li:last-child {
+      border-bottom: none;
+  }
+  
+  .menu-list a {
+      text-decoration: none;
+      color: #003366;
+  }
+  
+  .menu-list li:hover {
+      background-color: #f0f7ff;
+  }
+  
+  .menu-list a:hover {
+      text-decoration: underline;
+  }
+  
+  .dropdown {
+      position: relative;
+  }
+  
+  .submenu {
+      display: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+  }
+  
+  .submenu-visible {
+      display: block;
+  }
+  
+  .submenu-item {
+      padding-left: 20px !important;
+      background-color: #f9f9f9;
+  }
+  
+  .highlighted {
+      background-color: #ffffcc;
+      padding: 3px 5px;
+      border-radius: 3px;
+  }
+  
+  .dropdown > a:after {
+      content: '▼';
+      font-size: 10px;
+      margin-left: 5px;
+      vertical-align: middle;
+  }
+</style>
+</head>
+<body>
+<div class="sidebar">
+  <h3 class="menu-title">Theory & Computational Methods</h3>
+  <ul class="menu-list">
+      <li><a href="radiative-shock.html" target="_self">Center for Radiative Shock Hydrodynamics</a></li>
+      <li><a href="space-environment.html" target="_self">Center for Space Environment Modeling</a></li>
+      <li><a href="numerical-methods.html" target="_self">Numerical Methods & Scientific Computing</a></li>
+      <li class="dropdown">
+          <a href="javascript:void(0);" class="dropdown-toggle">Space Weather Modeling Framework (SWMF)</a>
+          <ul class="submenu">
+              <li class="submenu-item">
+                  <a href="swmf-download.html" target="_self" class="highlighted">SWMF Downloadable software</a>
+              </li>
+              <li class="submenu-item">
+                  <a href="swmf-docs.html" target="_self">Documentation</a>
+              </li>
+              <li class="submenu-item">
+                  <a href="swmf-tutorials.html" target="_self">Tutorials</a>
+              </li>
+          </ul>
+      </li>
+      <li class="dropdown">
+          <a href="javascript:void(0);" class="dropdown-toggle">Statistical Methods & Data Assimilation</a>
+          <ul class="submenu">
+              <li class="submenu-item">
+                  <a href="data-analysis.html" target="_self">Data Analysis</a>
+              </li>
+              <li class="submenu-item">
+                  <a href="predictive-modeling.html" target="_self">Predictive Modeling</a>
+              </li>
+          </ul>
+      </li>
+  </ul>
+</div>
+</body>
+</html>
